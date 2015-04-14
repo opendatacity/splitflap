@@ -21,7 +21,7 @@ module.exports = function (w, h) {
 			commands.push('</svg>');
 			commands = commands.join('\n');
 
-			fs.writeFileSync('test.svg', commands, 'utf8');
+			//fs.writeFileSync('test.svg', commands, 'utf8');
 
 			var img = gm(new Buffer(commands));
 			

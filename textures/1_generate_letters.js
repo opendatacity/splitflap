@@ -37,6 +37,6 @@ letters.forEach(function (letter, index) {
 
 })
 
-img.save('test.png');
+img.save('images/letters.png');
 
 
