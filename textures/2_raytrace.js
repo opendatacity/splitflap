@@ -52,7 +52,7 @@ png.load('images/letters.png', function (imgLetters) {
 						switch (entry.type) {
 							case 'texture':
 								var xOffset = (entry.textureId + l + c.letterCount) % c.letterCount;
-								color = imgLetters.getColor(entry.x + xOffset*c.flapWidth*aa, entry.y);
+								color = imgLetters.getColor((entry.x + xOffset*c.flapWidth)*aa, (entry.y*aa));
 							break;
 							case 'color':
 								color = entry.color;
