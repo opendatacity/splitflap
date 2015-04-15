@@ -12,5 +12,6 @@ var config = {
 	fontName: 'Roboto'
 }
 
+config.letterCount = config.letters.length;
 
 module.exports = config;

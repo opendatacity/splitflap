@@ -1,22 +1,22 @@
 
-var config = require('./config.js');
+var c = require('./config.js');
 var svg = require('./lib/svg.js');
 
-var letters = config.letters.split('');
+var letters = c.letters.split('');
 
-var aa = config.antialias;
+var aa = c.antialias;
 
-var img = new svg(aa*letters.length*config.flapWidth, aa*config.flapHeight);
+var img = new svg(aa*c.letterCount*c.flapWidth, aa*c.flapHeight);
 
 letters.forEach(function (letter, index) {
-	var r  = aa*config.flapRadius;
-	var g1 = aa*config.flapGap1;
-	var g2 = aa*config.flapGap2;
-	var x0 = aa*index*config.flapWidth;
-	var x2 = x0 + aa*config.flapWidth-1;
+	var r  = aa*c.flapRadius;
+	var g1 = aa*c.flapGap1;
+	var g2 = aa*c.flapGap2;
+	var x0 = aa*index*c.flapWidth;
+	var x2 = x0 + aa*c.flapWidth-1;
 	var x1 = (x0+x2)/2;
 	var y0 = 0;
-	var y2 = aa*config.flapHeight-1;
+	var y2 = aa*c.flapHeight-1;
 	var y1 = (y0+y2)/2;
 
 	
@@ -31,9 +31,9 @@ letters.forEach(function (letter, index) {
 		'L', [x0,y0+r],
 		'A', [r,r], 0, [0,1], [x0+r,y0],
 		'Z'
-	], config.flapColor);
+	], c.flapColor);
 
-	img.drawText(x1, y1, letter, aa*config.flapHeight*0.8, config.fontColor);
+	img.drawText(x1, y1, letter, aa*c.flapHeight*0.8, c.fontColor);
 
 })
 
