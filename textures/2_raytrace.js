@@ -10,8 +10,12 @@ var imgFlaps = new png.Image(
 var aa = c.antialias;
 var aa2 = aa*aa;
 
+console.log('Loading Letters');
+
 png.load('images/letters.png', function (imgLetters) {
 	for (var f = 0; f < c.frames; f++) {
+		console.log('Rendering Frame '+(f+1)+' von '+c.frames);
+
 		for (var x = 0; x < c.flapWidth; x++) {
 			for (var y = 0; y < c.flapHeight; y++) {
 				var pixels = getPixels(x,y,f/c.frames);
@@ -25,6 +29,8 @@ png.load('images/letters.png', function (imgLetters) {
 			}
 		}
 	}
+
+	console.log('Saving Texture');
 
 	imgFlaps.save('../info-beamer/texture.png');
 
