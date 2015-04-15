@@ -59,9 +59,9 @@ png.load('images/letters.png', function (imgLetters) {
 							break;
 						}
 						var a = color[3]/255;
-						cSum[0] = (1-a)*cSum[0] + color[0];
-						cSum[1] = (1-a)*cSum[1] + color[1];
-						cSum[2] = (1-a)*cSum[2] + color[2];
+						cSum[0] = (1-a)*cSum[0] + a*color[0];
+						cSum[1] = (1-a)*cSum[1] + a*color[1];
+						cSum[2] = (1-a)*cSum[2] + a*color[2];
 						cSum[3] = (1-a)*cSum[3] + a*255;
 					})
 
