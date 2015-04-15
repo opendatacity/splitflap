@@ -1,6 +1,8 @@
 var config = {
 	letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.-?!',
-	antialias: 4,
+	antialias: 1,
+	motionblur: 1,
+	frames: 5,
 	flapWidth: 100,
 	flapHeight: 150,
 	flapRadius: 20,
