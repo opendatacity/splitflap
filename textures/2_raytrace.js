@@ -3,8 +3,8 @@ var c = require('./config.js');
 var png = require('./lib/png.js');
 
 var imgFlaps = new png.Image(
-	c.flapWidth*c.letterCount,
-	c.flapHeight*c.frames
+	c.flapWidth*c.letterCols,
+	c.flapHeight*Math.ceil(c.frames*c.letterCount/c.letterCols)
 )
 
 var aa = c.antialias;
@@ -20,9 +20,13 @@ png.load('images/letters.png', function (imgLetters) {
 			for (var y = 0; y < c.flapHeight; y++) {
 				var pixels = getPixels(x,y,f/c.frames);
 				for (var l = 0; l < c.letterCount; l++) {
+					var index = f + l*c.frames;
+					var xi = index % c.letterCols;
+					var yi = Math.floor(index/c.letterCols);
+
 					imgFlaps.setColor(
-						x + l*c.flapWidth,
-						y + f*c.flapHeight,
+						x + xi*c.flapWidth,
+						y + yi*c.flapHeight,
 						pixels[l]
 					)
 				}
@@ -84,20 +88,23 @@ png.load('images/letters.png', function (imgLetters) {
 
 	function render(x, y, f) {
 		var stack = [];
+		var w = c.flapWidth;
 		var h = c.flapHeight;
 		var scale = Math.abs(Math.cos(f*Math.PI))+1e-10;
 		var y2 = (y-h/2)/scale + h/2;
 		if (y < h/2) {
-			stack.push({type:'texture', textureId:1, x:x, y:y})
-			if ((f < 0.5) && (y2 > 0)) {
-				stack.push({type:'texture', textureId:0, x:x, y:y2})
-			}
+			addTexture(1, x, y)
+			if ((f < 0.5) && (y2 >= 0)) addTexture(0, x, y2)
 		} else {
-			stack.push({type:'texture', textureId:0, x:x, y:y})
-			if ((f > 0.5) && (y2 < c.flapHeight)) {
-				stack.push({type:'texture', textureId:1, x:x, y:y2})
-			}
+			addTexture(0, x, y)
+			if ((f > 0.5) && (y2 < c.flapHeight)) addTexture(1, x, y2)
 		}
 		return stack;
+
+		function addTexture(i,x,y) {
+			if (Math.abs(y-h/2) < c.flapGap1) return
+			if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return
+			stack.push({type:'texture', textureId:i, x:x, y:y})
+		}
 	}
 })
