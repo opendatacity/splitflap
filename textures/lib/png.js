@@ -26,7 +26,14 @@ function Image(width, height, buffer) {
 	if (buffer.length != bufferLength) throw Error();
 
 	function setColor(x, y, color) {
-		var index = (Math.round(y)*width + Math.round(x))*4;
+		x = Math.round(x);
+		y = Math.round(y);
+		
+		if ((x < 0) || (x >= width))  return;
+		if ((y < 0) || (y >= height)) return;
+
+		var index = (y*width + x)*4;
+		
 		buffer.writeUInt8(Math.max(0, Math.min(255, Math.round(color[0]))), index+0);
 		buffer.writeUInt8(Math.max(0, Math.min(255, Math.round(color[1]))), index+1);
 		buffer.writeUInt8(Math.max(0, Math.min(255, Math.round(color[2]))), index+2);
@@ -34,7 +41,14 @@ function Image(width, height, buffer) {
 	}
 
 	function getColor(x, y) {
-		var index = (Math.round(y)*width + Math.round(x))*4;
+		x = Math.round(x);
+		y = Math.round(y);
+		
+		if ((x < 0) || (x >= width))  return [0,0,0,0];
+		if ((y < 0) || (y >= height)) return [0,0,0,0];
+
+		var index = (y*width + x)*4;
+
 		return [
 			buffer.readUInt8(index+0),
 			buffer.readUInt8(index+1),
