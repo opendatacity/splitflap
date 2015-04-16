@@ -12,6 +12,9 @@ module.exports = function (w, h) {
 			commands.push('<path d="'+path+'" stroke="none" fill="rgb('+color.join(',')+')"/>');
 		},
 		drawText: function (x, y, text, size, color) {
+			text = text.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
 			commands.push(
 				'<text x="'+x+'" y="'+y+'" dy="'+(size*0.37)+'" font-size="'+size+'" stroke="none" fill="rgb('+color.join(',')+')" text-anchor="middle">'+text+'</text>'
 			)
@@ -38,7 +41,7 @@ module.exports = function (w, h) {
 
 			img.write(filename, function (err) {
 				if (err) {
-					console.error(err);
+					throw err;
 					return
 				}
 			})
