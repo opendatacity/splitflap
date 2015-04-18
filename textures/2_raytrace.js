@@ -18,7 +18,36 @@ png.load('images/letters.png', function (imgLetters) {
 
 		for (var x = 0; x < c.flapWidth; x++) {
 			for (var y = 0; y < c.flapHeight; y++) {
-				var pixels = getPixels(x,y,f/c.frames);
+
+				var pixels;
+				if ((c.motionblurCount == 1) || ((f == 0) || (f == c.frames-1))) {
+					pixels = getPixels(x,y,f/c.frames);
+				} else {
+					for (var l = 0; l < c.letterCount; l++) pixels[l] = [0,0,0,0];
+
+					for (var m = 0; m < c.motionblurCount; m++) {
+						var df = m/(c.motionblurCount-1);
+						df = (df - 0.5) * c.motionblurStrength;
+						var p = getPixels(x,y,(f+df)/c.frames);
+
+						for (var l = 0; l < c.letterCount; l++) {
+							var a = p[l][3];
+							pixels[l][0] += p[l][0]*a;
+							pixels[l][1] += p[l][1]*a;
+							pixels[l][2] += p[l][2]*a;
+							pixels[l][3] += a;
+						}
+					}
+
+					for (var l = 0; l < c.letterCount; l++) {
+						var a = pixels[l][3] + 1e-100;
+						pixels[l][0] = pixels[l][0]/a;
+						pixels[l][1] = pixels[l][1]/a;
+						pixels[l][2] = pixels[l][2]/a;
+						pixels[l][3] = a/c.motionblurCount;
+					}
+				}
+
 				for (var l = 0; l < c.letterCount; l++) {
 					var index = f + l*c.frames;
 					var xi = index % c.letterCols;
@@ -76,7 +105,7 @@ png.load('images/letters.png', function (imgLetters) {
 
 		for (var l = 0; l < c.letterCount; l++) {
 			var color = colors[l];
-			var alpha = Math.max(1e-10, color[3])/255;
+			var alpha = Math.max(1e-100, color[3])/255;
 			color[0] = color[0]/alpha;
 			color[1] = color[1]/alpha;
 			color[2] = color[2]/alpha;
@@ -90,7 +119,7 @@ png.load('images/letters.png', function (imgLetters) {
 		var stack = [];
 		var w = c.flapWidth;
 		var h = c.flapHeight;
-		var scale = Math.abs(Math.cos(f*Math.PI))+1e-10;
+		var scale = Math.abs(Math.cos(f*Math.PI))+1e-100;
 		var y2 = (y-h/2)/scale + h/2;
 		if (y < h/2) {
 			addTexture(1, x, y)

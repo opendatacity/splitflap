@@ -1,7 +1,8 @@
 var config = {
 	letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()',
 	antialias: 4,
-	motionblur: 1,
+	motionblurCount: 32,
+	motionblurStrength: 0.2,
 	frames: 5,
 	flapWidth: 100,
 	flapHeight: 150,
