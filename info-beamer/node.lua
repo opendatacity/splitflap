@@ -1,18 +1,18 @@
 -- Parameter
 
-rowCount = 7
-colCount = 19
+rowCount = 6
+colCount = 18
 
 letterSizeX = 100
 letterSizeY = 150
 letterSpaceX = 0
-letterSpaceY = 0
+letterSpaceY = 30
 letterCols = 20
 letterRows = 13
 
 letterString = ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()'
 
-letterCount = 50
+letterCount = string.len(letterString)
 frames = 5
 textureCount = frames*letterCount
 
@@ -27,26 +27,68 @@ offsetX = (1920 - (letterSizeX + letterSpaceX)*colCount + letterSpaceX)/2
 offsetY = (1080 - (letterSizeY + letterSpaceY)*rowCount + letterSpaceY)/2
 
 flaps = {}
-for i = 0, flapCount-1 do
-	col = math.fmod(i,colCount)
-	row = math.floor(i/colCount)
-	flaps[i] = {
-		col = col,
-		row = row,
-		x = offsetX + col*(letterSizeX + letterSpaceX),
-		y = offsetY + row*(letterSizeY + letterSpaceY),
-		letter = math.floor(math.random() * letterCount),
-		dx = 0,
-		dy = 0
+todos = {}
+lut = {}
+
+function init()
+	for i = 0, flapCount-1 do
+		local col = math.fmod(i,colCount)
+		local row = math.floor(i/colCount)
+		flaps[i] = {
+			col = col,
+			row = row,
+			x = offsetX + col*(letterSizeX + letterSpaceX),
+			y = offsetY + row*(letterSizeY + letterSpaceY),
+			letter = 0,
+			toLetter = 0,
+			dx = 0,
+			dy = 0
+		}
+	end
+
+	local replacements = {
+		['ß'] = 'SS'
 	}
+
+	for i = 1, string.len(letterString) do
+		local byte = string.byte(letterString, i)
+		lut[byte] = {i-1}
+	end
+
+	for key,value in pairs(replacements) do
+		local result = {}
+		for i = 1, string.len(value) do
+			local byte = string.byte(value, i)
+			table.insert(result, lut[byte][1])
+		end
+		local byte = string.byte(key, 1)
+		lut[byte] = result
+	end
+
+	table.insert(todos, { wait=0, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=3, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=3, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=3, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=3, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=3, msg='@mrtoto:\nMeine iOS App fÜr\ndie @republica\n#rp15 ist jetzt im\nApp Store VerfÜg-\nbar. Mehr infos …' })
+	table.insert(todos, { wait=3, msg='Stage E, 15:00\nre:data - Workshop\n\nOpen Data trifft\nre:publica\nmit Michael Kreil' })
+	table.insert(todos, { wait=10, msg='' })
+	table.insert(todos, { wait=3, msg='' })
 end
+
+init()
 
 shader = resource.create_shader[[
 	uniform sampler2D Texture;
 	varying vec2 TexCoord;
 	uniform float d[36];
 
-	const vec2 scale = vec2(0.9, 1.0/13.0);
+	const vec2 scale = vec2(18.0/20.0, 1.0/13.0);
 
 	vec2 getOffset(int i) {
 		vec2 offset = vec2(0,0);
@@ -124,7 +166,7 @@ shader = resource.create_shader[[
 
 	void main() {
 		int i = int(TexCoord.x*18.0);
-		vec2 offset = vec2(0.0,0.0); //getOffset(i);
+		vec2 offset = getOffset(i);
 		gl_FragColor = texture2D(Texture, TexCoord*scale + offset);
 	}
 ]]
@@ -144,10 +186,14 @@ function node.render()
 
 	draw_background()
 	local textureIndex, dx, dy
+	local animFinished = true
 
 	for i = 0, flapCount-1 do
 		local flap = flaps[i]
-		flap.letter = math.fmod(flap.letter+0.2, letterCount);
+		if (flap.letter ~= flap.toLetter) then
+			flap.letter = (math.floor(flap.letter*frames+1.5) % (letterCount*frames))/frames;
+			animFinished = false
+		end
 		textureIndex = flap.letter * frames
 		textureIndex = math.fmod(textureIndex, frames*letterCount)
 		dx = math.floor(math.fmod(textureIndex, letterCols))
@@ -160,6 +206,45 @@ function node.render()
 		draw_row(r)
 	end
 
+	if (animFinished) then
+		-- look for next todo
+		if (table.maxn(todos) <= 0) then
+			return
+		end
+		if (todos[1].time == nil) then
+			todos[1].time = todos[1].wait + sys.now()
+		end
+		if (todos[1].time < sys.now()) then
+			local todo = table.remove(todos, 1)
+			for i = 0, flapCount-1 do
+				flaps[i].toLetter = 0
+			end
+			local msg = string.upper(todo.msg)
+			local r = 0
+			local c = 0
+			for i = 1, string.len(msg) do
+				local byte = string.byte(msg, i)
+				if (byte == 10) then
+					r = r + 1
+					c = 0
+				else
+					local pos = lut[byte]
+					if (pos == nil) then
+						-- unknown character
+						print('Unknown character "'..string.sub(msg,i,i)..'" ('..byte..') @'..i..' in "'..msg..'"')
+						pos = lut[63]
+					end
+					for j = 1, table.maxn(pos) do
+						if ((c < colCount) and (r < rowCount)) then
+							local index = r*colCount + c
+							flaps[index].toLetter = pos[j]
+							c = c + 1
+						end
+					end
+				end
+			end
+		end
+	end
 end
 
 function draw_background()
