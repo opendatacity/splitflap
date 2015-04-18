@@ -1,5 +1,5 @@
 var config = {
-	letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()',
+	letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()/…',
 	antialias: 4,
 	motionblurCount: 32,
 	motionblurStrength: 0.2,

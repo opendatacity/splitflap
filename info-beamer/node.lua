@@ -10,7 +10,7 @@ letterSpaceY = 30
 letterCols = 20
 letterRows = 13
 
-letterString = ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()'
+letterString = ' ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789@#-.,:?!()/…'
 
 letterCount = string.len(letterString)
 frames = 5
