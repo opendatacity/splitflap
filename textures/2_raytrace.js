@@ -12,7 +12,7 @@ var aa2 = aa*aa;
 
 console.log('Loading Letters');
 
-png.load('images/letters.png', function (imgLetters) {
+png.load('images/letters'+c.suffix+'.png', function (imgLetters) {
 	for (var f = 0; f < c.frames; f++) {
 		console.log('Rendering Frame '+(f+1)+' von '+c.frames);
 
@@ -65,7 +65,7 @@ png.load('images/letters.png', function (imgLetters) {
 
 	console.log('Saving Texture');
 
-	imgFlaps.save('../info-beamer/texture.png');
+	imgFlaps.save('../info-beamer/texture'+c.suffix+'.png');
 
 	function getPixels(x0, y0, f) {
 

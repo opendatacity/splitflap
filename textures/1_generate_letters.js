@@ -8,6 +8,8 @@ var aa = c.antialias;
 
 var img = new mvg(aa*c.letterCount*c.flapWidth, aa*c.flapHeight);
 
+console.log('Generating Letters');
+
 letters.forEach(function (letter, index) {
 	var r  = aa*c.flapRadius;
 	var g1 = aa*c.flapGap1;
@@ -37,6 +39,6 @@ letters.forEach(function (letter, index) {
 
 })
 
-img.save('images/letters.png');
+img.save('images/letters'+c.suffix+'.png');
 
 
