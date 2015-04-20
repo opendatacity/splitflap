@@ -1,12 +1,12 @@
 
 var c = require('./config.js');
-var svg = require('./lib/svg.js');
+var mvg = require('./lib/mvg.js');
 
 var letters = c.letters.split('');
 
 var aa = c.antialias;
 
-var img = new svg(aa*c.letterCount*c.flapWidth, aa*c.flapHeight);
+var img = new mvg(aa*c.letterCount*c.flapWidth, aa*c.flapHeight);
 
 letters.forEach(function (letter, index) {
 	var r  = aa*c.flapRadius;
