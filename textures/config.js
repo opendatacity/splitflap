@@ -5,7 +5,7 @@ var config = {
 	motionblurCount: quality*quality,
 	motionblurStrength: 0.3,
 	frames: 5,
-	flapRadius: 20,
+	flapRadius: 10,
 	flapGap1: 2,
 	flapGap2: 10,
 	backColor: [0,46,60],
