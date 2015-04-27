@@ -1,26 +1,36 @@
-var type = process.argv[2];
-if (!type) type = '400'
+var quality = 1;
 
 var config = {
-	letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!…',
-	antialias: 4,
-	motionblurCount: 16,
-	motionblurStrength: 0.2,
+	antialias: quality,
+	motionblurCount: quality*quality,
+	motionblurStrength: 0.3,
 	frames: 5,
-	flapWidth: 100,
-	flapHeight: 150,
 	flapRadius: 20,
 	flapGap1: 2,
-	flapGap2: 15,
+	flapGap2: 10,
 	backColor: [0,46,60],
-	flapColor: [0,55,70],
-	fontColor: [255,255,255],
-	fontName: './fonts/helvetica_neue_condensed_'+type+'.ttf',
-	suffix: '_'+type
+	fonts: [
+		{
+			flapColor: [0,55,70],
+			flapHeight: 80,
+			flapWidth: 60,
+			fontColor: [255,255,255],
+			fontName: './fonts/helvetica_neue_condensed_400.ttf',
+			fontSize: 60,
+			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!…',
+			name: 'normal',
+		},
+		{
+			flapColor: [0,55,70],
+			flapHeight: 80,
+			flapWidth: 60,
+			fontColor: [255,255,255],
+			fontName: './fonts/helvetica_neue_condensed_600.ttf',
+			fontSize: 60,
+			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!…',
+			name: 'bold',
+		}
+	]
 }
 
-config.letterCount = config.letters.length;
-config.letterCols = Math.floor(2048/config.flapWidth);
-
 module.exports = config;
-

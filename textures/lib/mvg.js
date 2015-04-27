@@ -1,6 +1,5 @@
 var fs = require('fs');
 var gm = require('gm');
-var c = require('../config.js')
 
 module.exports = function (w, h) {
 	var commands = [];
@@ -16,12 +15,12 @@ module.exports = function (w, h) {
 			commands.push('path "'+path+'"');
 			commands.push('pop graphic-context');
 		},
-		drawText: function (x, y, text, size, color) {
+		drawText: function (x, y, text, size, color, fontName) {
 			var utf8 = text.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
 			   return '&#'+i.charCodeAt(0)+';';
 			});
-			var dy = -size*0.45;
-			var font = '"'+c.fontName+'"';
+			var dy = -size*0.53;
+			var font = '"'+fontName+'"';
 			if (utf8 == '&#9829;') {
 				font = 'Arial';
 				dy -= size*0.2;
@@ -33,7 +32,7 @@ module.exports = function (w, h) {
 			commands.push('font-size '+size);
 			commands.push('gravity Center');
 			commands.push('font '+font);
-			commands.push('text '+(x-w/2+size*0.01)+','+(y+dy)+' "'+text+'"');
+			commands.push('text '+(x-w/2+size*0.02)+','+(y+dy)+' "'+text+'"');
 			commands.push('pop graphic-context');
 		},
 		save: function (filename) {
@@ -51,14 +50,6 @@ module.exports = function (w, h) {
 				a.forEach(function (e,i) { a[i] = 'MVG:'+e });
 			});
 			img.options({imageMagick: true})
-
-			img.in('-font');
-			img.in('Arial');
-
-			if (c.fontName) {
-				img.in('-font');
-				img.in(c.fontName);
-			}
 
 			img.in('-size');
 			img.in(w+'x'+h);
