@@ -1,6 +1,6 @@
 
-var c = require('./config.js');
-var png = require('./lib/png.js');
+var c = require('../config.js');
+var png = require('../lib/png.js');
 
 c.fonts.forEach(function (font) {
 	render(font);

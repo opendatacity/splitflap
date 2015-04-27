@@ -1,6 +1,6 @@
 
-var c = require('./config.js');
-var mvg = require('./lib/mvg.js');
+var c = require('../config.js');
+var mvg = require('../lib/mvg.js');
 
 c.fonts.forEach(function (font) {
 	render(font);
