@@ -20,7 +20,7 @@ function render(font) {
 
 	console.log('Loading Letters');
 
-	png.load('images/letters_'+font.name+'.png', function (imgLetters) {
+	png.load('images/letters_'+font.name+'.png', 'rgba', function (imgLetters) {
 		for (var f = 0; f < c.frames; f++) {
 			console.log('Rendering Frame '+(f+1)+' von '+c.frames);
 
