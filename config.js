@@ -16,9 +16,9 @@ var config = {
 			flapHeight: 80,
 			flapWidth: 60,
 			fontColor: [255,255,255],
-			fontName: './fonts/helvetica_neue_condensed_300.ttf',
+			fontName: './fonts/helvetica_neue_condensed_400.ttf',
 			fontSize: 60,
-			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!…',
+			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!\'…',
 			name: 'normal',
 		},
 		{
@@ -28,7 +28,7 @@ var config = {
 			fontColor: [255,255,255],
 			fontName: './fonts/helvetica_neue_condensed_800.ttf',
 			fontSize: 60,
-			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!…',
+			letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!\'…',
 			name: 'bold',
 		}
 	]
