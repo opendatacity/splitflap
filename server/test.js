@@ -64,7 +64,7 @@ var state4 = {
 	speaker2: 'GÜNTER BARTSCH, CHRISTIAN HUMBORG, ISABELLA DAVID, MORITZ TSCHERMAK'
 }
 
-var screenplay = [state0,1,state1,10,state2,10,state3,10,state4,10,state1,10,state0,3]
+var screenplay = [state0,0,state1,0,state2,0,state3,0,state4,0,state1,0,state0,0]
 
 Splitflap(flaps, function (splitflap) {
 	splitflap.render(screenplay, 'test.mp4');
