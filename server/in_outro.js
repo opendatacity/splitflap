@@ -1,3 +1,4 @@
+
 var async = require('async');
 var Splitflap = require('../lib/splitflap.js');
 
@@ -13,7 +14,7 @@ var flaps = [
 	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3}
 ]
 
-var pause = 1;
+var pause = 5;
 var empty = {title:'', text:''};
 
 var intro = {
@@ -24,7 +25,7 @@ var intro = {
 		{
 			title:'Hello Earthling!',
 			text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!'
-		}, pause,/*
+		}, pause,
 		{
 			title:'Hallo Erdling!',
 			text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!'
@@ -41,7 +42,7 @@ var intro = {
 			title:'Salut terrien!',
 			text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.'
 		}, pause,
-		empty*/
+		empty
 	]
 }
 
@@ -76,7 +77,7 @@ var outro = {
 
 Splitflap(flaps, function (splitflap) {
 	async.eachSeries(
-		[intro],
+		[intro, outro],
 		function (movie, callback) {
 			console.log('Render "'+movie.title+'"');
 			splitflap.render(movie.screenplay, movie.filename, callback);
