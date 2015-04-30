@@ -1,17 +1,17 @@
 var Splitflap = require('../lib/splitflap.js');
 
 var flaps = [
-	{key:'header',   font:'bold',   x:48, dy:48, length:29, gap:3},
+	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
 
-	{key:'time1',    font:'normal', x:48, dy:90, length:29, gap:3},
-	{key:'title1',   font:'bold',   x:48, dy:14, length:29, gap:3},
-	{key:'title1',   font:'bold',   x:48, dy:14, length:29, gap:3},
-	{key:'speaker1', font:'normal', x:48, dy:14, length:29, gap:3},
+	{key:'time1',    font:'400', x:48, dy:90, length:29, gap:3},
+	{key:'title1',   font:'800', x:48, dy:14, length:29, gap:3},
+	{key:'title1',   font:'800', x:48, dy:14, length:29, gap:3},
+	{key:'speaker1', font:'400', x:48, dy:14, length:29, gap:3},
 
-	{key:'time2',    font:'normal', x:48, dy:90, length:29, gap:3},
-	{key:'title2',   font:'bold',   x:48, dy:14, length:29, gap:3},
-	{key:'title2',   font:'bold',   x:48, dy:14, length:29, gap:3},
-	{key:'speaker2', font:'normal', x:48, dy:14, length:29, gap:3}
+	{key:'time2',    font:'400', x:48, dy:90, length:29, gap:3},
+	{key:'title2',   font:'800', x:48, dy:14, length:29, gap:3},
+	{key:'title2',   font:'800', x:48, dy:14, length:29, gap:3},
+	{key:'speaker2', font:'400', x:48, dy:14, length:29, gap:3}
 ]
 
 var state0 = {
