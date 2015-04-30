@@ -2,15 +2,15 @@ var async = require('async');
 var Splitflap = require('../lib/splitflap.js');
 
 var flaps = [
-	{key:'title', font:'bold',   x:48, dy:48, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3},
-	{key:'text',  font:'normal', x:48, dy:33, length:29, gap:3}
+	{key:'title', font:'800', x:48, dy:48, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3},
+	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3}
 ]
 
 var pause = 1;
