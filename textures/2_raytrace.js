@@ -98,16 +98,20 @@ async.eachSeries(
 									case 'texture':
 										var xOffset = (entry.textureId + l + letterCount) % letterCount;
 										color = imgLetters.getColor((entry.x + xOffset*font.flapWidth)*aa, (entry.y*aa));
+										var a = color[3]/255;
+										cSum[0] = (1-a)*cSum[0] + a*color[0];
+										cSum[1] = (1-a)*cSum[1] + a*color[1];
+										cSum[2] = (1-a)*cSum[2] + a*color[2];
+										cSum[3] = (1-a)*cSum[3] + a*255;
 									break;
 									case 'color':
 										color = entry.color;
+										var a = color[3]/255;
+										cSum[0] = (1-a)*cSum[0] + a*color[0];
+										cSum[1] = (1-a)*cSum[1] + a*color[1];
+										cSum[2] = (1-a)*cSum[2] + a*color[2];
 									break;
 								}
-								var a = color[3]/255;
-								cSum[0] = (1-a)*cSum[0] + a*color[0];
-								cSum[1] = (1-a)*cSum[1] + a*color[1];
-								cSum[2] = (1-a)*cSum[2] + a*color[2];
-								cSum[3] = (1-a)*cSum[3] + a*255;
 							})
 
 							for (var ci = 0; ci < 4; ci++) colors[l][ci] += cSum[ci];
@@ -131,20 +135,38 @@ async.eachSeries(
 				var stack = [];
 				var w = font.flapWidth;
 				var h = font.flapHeight;
-				var scale = Math.abs(Math.cos(f*Math.PI))+1e-100;
-				var y2 = (y-h/2)/scale + h/2;
+				var c = Math.cos(f*Math.PI);
+				var d = Math.sin(f*Math.PI);
+				var scale = Math.abs(c)+1e-100;
+				var yt = (y-h/2)/scale + h/2;
+				var yb = (1-c)*0.5*h;
+
+				var shadow = 2*(yb-y)/h/(d+1e-5) + 0.5;
+
 				if (y < h/2) {
-					addTexture(1, x, y)
-					if ((f < 0.5) && (y2 >= 0)) addTexture(0, x, y2)
+					addTexture(1, x, y);
+
+					var a = Math.min(1, Math.max(0, shadow));
+					addColor([0,0,0,100*(1-a)]);
+
+					if ((f < 0.5) && (yt >= 0)) addTexture(0, x, yt)
 				} else {
 					addTexture(0, x, y)
-					if ((f > 0.5) && (y2 < font.flapHeight)) addTexture(1, x, y2)
+
+					var a = Math.min(1, Math.max(0, 1-shadow));
+					addColor([0,0,0,100*(1-a)]);
+
+					if ((f > 0.5) && (yt < font.flapHeight)) addTexture(1, x, yt)
 				}
 				return stack;
 
+				function addColor(color) {
+					stack.push({type:'color', color:color})
+				}
+
 				function addTexture(i,x,y) {
-					if (Math.abs(y-h/2) < c.flapGap1) return
-					if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return
+					if (Math.abs(y-h/2) < c.flapGap1) return false
+					if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return false
 					stack.push({type:'texture', textureId:i, x:x, y:y})
 				}
 			}
