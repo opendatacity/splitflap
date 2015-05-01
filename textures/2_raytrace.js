@@ -13,8 +13,8 @@ async.eachSeries(
 		var letterCount = letters.length;
 
 		var imgFlaps = new png.Image(
-			font.flapWidth*letterCount*c.frames,
-			font.flapHeight
+			font.flapWidth*c.frames,
+			font.flapHeight*letterCount
 		)
 
 		var aa = c.antialias;
@@ -59,9 +59,6 @@ async.eachSeries(
 						}
 
 						for (var l = 0; l < letterCount; l++) {
-							var index = f + l*c.frames;
-							var xi = index;
-
 							var a = pixels[l][3]/255;
 							pixels[l][0] = pixels[l][0]*a + (1-a)*c.backColor[0];
 							pixels[l][1] = pixels[l][1]*a + (1-a)*c.backColor[1];
@@ -69,8 +66,8 @@ async.eachSeries(
 							pixels[l][3] = 255;
 
 							imgFlaps.setColor(
-								x + xi*font.flapWidth,
-								y,
+								x + f*font.flapWidth,
+								y + l*font.flapHeight,
 								pixels[l]
 							)
 						}
