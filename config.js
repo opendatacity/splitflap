@@ -1,10 +1,9 @@
-var quality = 4;
 
 var config = {
-	antialias: quality,
+	antialias: 2,
 	frames: 15,
 	speed: 3,
-	motionblurCount: quality*quality,
+	motionblurCount: 8,
 	motionblurStrength: 1,
 	flapRadius: 10,
 	flapGap1: 1,
