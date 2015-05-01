@@ -45,7 +45,7 @@ async.eachSeries(
 			img.drawText(x1, y1, letter, aa*font.fontSize, font.fontColor, font.fontName);
 
 		})
-		img.save('images/letters_'+font.name+'.png', callback);
+		img.save('../images/letters_'+font.name+'.png', callback);
 	},
 	function () {
 		console.log('Finished')
