@@ -98,6 +98,22 @@ async.eachSeries(
 									case 'texture':
 										var xOffset = (entry.textureId + l + letterCount) % letterCount;
 										color = imgLetters.getColor((entry.x + xOffset*font.flapWidth)*aa, (entry.y*aa));
+										if (entry.brightness) {
+											if (entry.brightness > 0) {
+												//brighter
+												var c = 1-entry.brightness;
+												var o = 255*(1-c);
+												color[0] += o;
+												color[1] += o;
+												color[2] += o;
+											} else {
+												//darker
+												var c = entry.brightness+1;
+												color[0] *= c;
+												color[1] *= c;
+												color[2] *= c;
+											}
+										}
 										var a = color[3]/255;
 										cSum[0] = (1-a)*cSum[0] + a*color[0];
 										cSum[1] = (1-a)*cSum[1] + a*color[1];
@@ -149,14 +165,20 @@ async.eachSeries(
 					var a = Math.min(1, Math.max(0, shadow));
 					addColor([0,0,0,100*(1-a)]);
 
-					if ((f < 0.5) && (yt >= 0)) addTexture(0, x, yt)
+					if ((f < 0.5) && (yt >= 0)) {
+						var b = (c-1)*0.3;
+						addTexture(0, x, yt, b);
+					}
 				} else {
 					addTexture(0, x, y)
 
 					var a = Math.min(1, Math.max(0, 1-shadow));
 					addColor([0,0,0,100*(1-a)]);
 
-					if ((f > 0.5) && (yt < font.flapHeight)) addTexture(1, x, yt)
+					if ((f > 0.5) && (yt < font.flapHeight)) {
+						var b = (c+1)*0.1;
+						addTexture(1, x, yt, b);
+					}
 				}
 				return stack;
 
@@ -164,10 +186,10 @@ async.eachSeries(
 					stack.push({type:'color', color:color})
 				}
 
-				function addTexture(i,x,y) {
+				function addTexture(i,x,y,brightness) {
 					if (Math.abs(y-h/2) < c.flapGap1) return false
 					if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return false
-					stack.push({type:'texture', textureId:i, x:x, y:y})
+					stack.push({type:'texture', textureId:i, x:x, y:y, brightness:brightness})
 				}
 			}
 		})
