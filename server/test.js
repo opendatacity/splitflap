@@ -68,7 +68,7 @@ var pause = 10;
 var screenplay = [state0,0,state1,pause,state2,pause,state3,pause,state4,pause,state1,pause,state0,0]
 
 Splitflap(flaps, function (splitflap) {
-	splitflap.render(screenplay, 'web/video/test.mp4');
+	splitflap.renderMovie(screenplay, 'web/video/test.mp4');
 });
 
 

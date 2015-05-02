@@ -45,7 +45,7 @@ var screenplay = [
 
 
 Splitflap(flaps, function (splitflap) {
-	splitflap.render(screenplay, 'welcome.mp4', function () {
+	splitflap.renderMovie(screenplay, 'welcome.mp4', function () {
 		console.log('Finished')
 	});
 });

@@ -80,7 +80,7 @@ Splitflap(flaps, function (splitflap) {
 		[intro, outro],
 		function (movie, callback) {
 			console.log('Render "'+movie.title+'"');
-			splitflap.render(movie.screenplay, movie.filename, callback);
+			splitflap.renderMovie(movie.screenplay, movie.filename, callback);
 		},
 		function () {
 			console.log('Finished')
