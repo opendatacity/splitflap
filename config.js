@@ -1,6 +1,6 @@
 
 var config = {
-	antialias: 2,
+	antialias: 4,
 	frames: 15,
 	speed: 3,
 	motionblurCount: 8,
