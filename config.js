@@ -17,7 +17,7 @@ var config = {
 		fontColor: [255,255,255],
 		fontName: './fonts/helvetica_neue_condensed_400.ttf',
 		fontSize: 60,
-		letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#-.,:?!/\'…',
+		letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#?!/\"\':-…,.',
 		name: 'normal',
 	},
 	fonts: [
