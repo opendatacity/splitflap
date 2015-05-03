@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>Custom Video MRSS template for BrightSign Players</title>
+<link>http://100.127.17.243:8080/feeds/monitor2.rss</link>
+<description>Video Test</description>
+<ttl>30</ttl>
+<item>
+	<title>test</title>
+	<link>http://100.127.17.243:8080/video/test.mp4</link>
+	<description>test</description>
+	<guid isPermaLink="false">bblkuunukn</guid>
+	<media:content url="http://100.127.17.243:8080/video/test.mp4" fileSize="24488129" type="video/mp4" medium="video"/>
+</item><!--
+<item>
+	<title>intro</title>
+	<link>http://100.127.17.243:8080/intro.mp4</link>
+	<description>intro</description>
+	<guid isPermaLink="false">0610</guid>
+	<media:content url="http://100.127.17.243:8080/intro.mp4" fileSize="45930512" type="video/mp4" medium="video"/>
+</item>
+<item>
+	<title>outro</title>
+	<link>http://100.127.17.243:8080/outro.mp4</link>
+	<description>outro</description>
+	<guid isPermaLink="false">0625</guid>
+	<media:content url="http://100.127.17.243:8080/outro.mp4" fileSize="45840115" type="video/mp4" medium="video"/>
+</item>
+<item>
+	<title>welcome</title>
+	<link>http://100.127.17.243:8080/welcome.mp4</link>
+	<description>welcome</description>
+	<guid isPermaLink="false">0630</guid>
+	<media:content url="http://100.127.17.243:8080/welcome.mp4" fileSize="200579700" type="video/mp4" medium="video"/>
+</item>-->
+</channel>
+</rss>
