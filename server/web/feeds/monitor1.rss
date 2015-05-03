@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
 <title>test</title>
-<link>http://100.127.17.243:8080/feeds/monitor1.rss</link>
+<link>http://100.127.229.25/feeds/monitor1.rss</link>
 <description>test</description>
 <ttl>30</ttl>
 <item>
 	<title>test</title>
-	<link>http://100.127.17.243:8080/video/monitor1/2015-05-03T18:45_jSM5gSOW7Q22GzUC.mp4</link>
+	<link>http://100.127.229.25/video/welcome.mp4</link>
 	<description>test</description>
 	<guid isPermaLink="false">jSM5gSOW7Q22GzUC</guid>
-	<media:content url="http://100.127.17.243:8080/video/monitor1/2015-05-03T18:45_jSM5gSOW7Q22GzUC.mp4" fileSize="8889103" type="video/mp4" medium="video"/>
+	<media:content url="http://100.127.229.25/video/welcome.mp4" fileSize="78423738" type="video/mp4" medium="video"/>
 </item>
 </channel>
 </rss>
