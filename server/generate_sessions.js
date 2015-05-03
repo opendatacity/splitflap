@@ -1,8 +1,11 @@
 var fs = require('fs');
+var path = require('path');
 var c = require('../config.js');
 var Splitflap = require('../lib/splitflap.js');
 
-var pause = 20;
+var pause = 0;
+var knownHashsFilename = './data/knownHashs.json';
+var videoFolder = './web/video/';
 
 var flaps = [
 	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
@@ -35,74 +38,112 @@ var monitore = [
 ]
 
 var knownHashs = {};
-var todos = {};
-var todoCount = 0;
+if (fs.existsSync(knownHashsFilename)) {
+	knownHashs = fs.readFileSync(knownHashsFilename, 'utf8');
+	knownHashs = JSON.parse(knownHashs);
+}
+
 
 Splitflap(flaps, function (splitflap) {
-	check(splitflap);
-	setInterval(
-		function () {
-			check(splitflap)
-		},
-		c.sessions.every*1000
-	)
-})
+	var todos = {};
+	var todoCount = 0;
+	var todoRunning = false;
 
-function check(splitflap) {
-	var sessions = loadData();
-	var time0 = (new Date()).getTime()/1000;
-	for (var t = 0; t < c.sessions.future; t += c.sessions.step) {
-		var time = Math.floor((time0 + t)/c.sessions.step)*c.sessions.step;
-		var time_str = (new Date((time+2*3600)*1000)).toISOString().substr(0,16);
+	checkData(splitflap);
+	//setInterval(
+	//	function () { checkData(splitflap) },
+	//	c.sessions.updateDataEvery*1000
+	//)
 
-		monitore.forEach(function (monitor) {
-			var screenplay = [state0,0];
+	function checkTodo() {
+		if (todoRunning) return;
+		todoRunning = true;
 
-			monitor.stages.forEach(function (stage) {
-				var s0 = false; // current session
-				var s1 = false; // next session
+		var _todos = Object.keys(todos).map(function (key) { return todos[key]; });
 
-				sessions.forEach(function (session) {
-					if (session.location != stage) return;
-					if ((session.beginT <= time) && (time <= session.endT)) s0 = session;
-					if (session.beginT > time) {
-						if (!s1) {
-							 s1 = session;
-						} else {
-							if (session.beginT < s1.beginT) s1 = session;
+		if (_todos.length <= 0) {
+			todoRunning = false;
+			return;
+		}
+
+		_todos.sort(function (a,b) { return b.order - a.order; })
+		var todo = _todos.pop();
+
+		console.log('Generating "'+todo.filename+'"');
+		splitflap.renderMovie(todo.screenplay, videoFolder+'temp.mp4', function () {
+			checkFolder(path.dirname(videoFolder+todo.filename));
+			fs.renameSync(videoFolder+'temp.mp4', videoFolder+todo.filename)
+
+			knownHashs[todo.hash] = todo.filename;
+			fs.writeFileSync(knownHashsFilename, JSON.stringify(knownHashs, null, '\t'), 'utf8');
+			
+			todoRunning = false;
+			delete todos[todo.hash];
+
+			checkTodo();
+		});
+	}
+
+	function checkData() {
+		var sessions = loadData();
+		var time0 = (new Date()).getTime()/1000;
+		todoCount = 0;
+
+		for (var t = 0; t < c.sessions.future; t += c.sessions.forStep) {
+			var time = Math.floor((time0 + t)/c.sessions.forStep)*c.sessions.forStep;
+			var time_str = (new Date((time+2*3600)*1000)).toISOString().substr(0,16);
+
+			monitore.forEach(function (monitor) {
+				var screenplay = [state0,0];
+
+				monitor.stages.forEach(function (stage) {
+					var s0 = false; // current session
+					var s1 = false; // next session
+
+					sessions.forEach(function (session) {
+						if (session.location != stage) return;
+						if ((session.beginT <= time) && (time <= session.endT)) s0 = session;
+						if (session.beginT > time) {
+							if (!s1) {
+								 s1 = session;
+							} else {
+								if (session.beginT < s1.beginT) s1 = session;
+							}
 						}
+					})
+
+					var state = {
+						header:   stage,
+						time1:    s0 ? 'now running: '+sessionTime(s0) : 'ready for boarding …',
+						title1:   s0 ? s0.title : '',
+						speaker1: s0 ? s0.speakers : '',
+						time2:    s1 ? 'next: '+sessionTime(s1) : '',
+						title2:   s1 ? s1.title : '',
+						speaker2: s1 ? s1.speakers : ''
 					}
+
+					screenplay.push(state, pause);
 				})
 
-				var state = {
-					header:   stage,
-					time1:    s0 ? 'now running: '+sessionTime(s0) : 'ready for boarding …',
-					title1:   s0 ? s0.title : '',
-					speaker1: s0 ? s0.speakers : '',
-					time2:    s1 ? 'next: '+sessionTime(s1) : '',
-					title2:   s1 ? s1.title : '',
-					speaker2: s1 ? s1.speakers : ''
-				}
+				screenplay.push(state0);
 
-				screenplay.push(state, pause);
+				var hash = splitflap.getHash(screenplay);
+				if (!knownHashs[hash] && !todos[hash]) {
+					todos[hash] = {
+						hash:hash,
+						startTime:(new Date(time*1000)),
+						filename:monitor.name+'/'+time_str+'_'+hash+'.mp4',
+						order:todoCount,
+						screenplay:screenplay
+					}
+					todoCount++;
+				}
 			})
+		}
 
-			screenplay.push(state0);
-
-			var hash = splitflap.getHash(screenplay);
-			var name = monitor.name+'/'+time_str+'_'+hash;
-			if (!knownHashs[hash] && !todos[hash]) {
-				todos[hash] = {
-					hash:hash,
-					name:name,
-					screenplay:screenplay,
-					order:todoCount
-				}
-				todoCount++;
-			}
-		})
+		checkTodo();
 	}
-}
+})
 
 function sessionTime(session) {
 	return [
@@ -136,55 +177,9 @@ function loadData() {
 	return sessions;
 }
 
-/*
-var state1 = {
-	header:   'Stage 1',
-	time1:    'now running: 12:15-13:15',
-	title1:   'IMMERSIVE JOURNALISM: USING VIRTUAL REALITY FOR NEWS AND NONFICTION',
-	speaker1: 'NONNY DE LA PENA',
-	time2:    'next: 13:30-14:30',
-	title2:   'LIVING IN THE ELECTROMAGNETIC SPECTRUM',
-	speaker2: 'JAMES BRIDLE'
+function checkFolder(folder) {
+	if (!fs.existsSync(folder)) {
+		checkFolder(path.dirname(folder));
+		fs.mkdirSync(folder);
+	}
 }
-
-var state2 = {
-	header:   'Stage 4',
-	time1:    'now running: 12:15-13:15',
-	title1:   'DIGITALES EUROPA - ANALOGES URHEBERRECHT: WIE SCHAFFEN WIR DIE WENDE?',
-	speaker1: 'HAKAN TANRIVERDI, JULIA REDA',
-	time2:    'next: 13:30-14:30',
-	title2:   'BEST PRACTICE: DIE VIRALE KAMPAGE DES UMWELTMINISTERIUMS #ZIEK',
-	speaker2: 'SEBASTIAN BACKHAUS, JULIA MUSSGNUG, BARBARA HENDRICKS, MICHAEL SCHROEREN'
-}
-
-var state3 = {
-	header:   'Stage 7',
-	time1:    'now running: nothing',
-	title1:   '',
-	speaker1: '',
-	time2:    'next: 13:30-14:45',
-	title2:   'WER HAT DIE MACHT? KONVERGENTE MEDIEN ZWISCHEN WETTBEWERB UND KONTROLLE',
-	speaker2: 'JAN KOTTMANN, VOLKER GRASSMUCK, PHILIPP OTTO, BERNHARD PÖRKSEN'
-}
-
-var state4 = {
-	header:   'Stage 10',
-	time1:    'now running: 12:15-13:15',
-	title1:   'MEIN LEHNSHERR LIEST MEINE E-MAILS – ZU BESUCH IN EINEM ANDEREN EUROPA',
-	speaker1: 'MARTIN FISCHER, CORNELIS KATER, SVEN SEDIVY',
-	time2:    'next: 13:30-14:30',
-	title2:   'NONPROFIT-JOURNALISMUS – HOW TO',
-	speaker2: 'GÜNTER BARTSCH, CHRISTIAN HUMBORG, ISABELLA DAVID, MORITZ TSCHERMAK'
-}
-
-var pause = 10;
-var screenplay = [state0,0,state1,pause,state2,pause,state3,pause,state4,pause,state1,pause,state0,0]
-
-Splitflap(flaps, function (splitflap) {
-	splitflap.renderMovie(screenplay, 'web/video/test.mp4');
-});
-
-
-
-
-*/
