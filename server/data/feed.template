@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>re:publica split flap {{monitor}}</title>
+<link>http://{{host}}/feeds/{{monitor}}.rss</link>
+<description>re:publica split flap {{monitor}}</description>
+<ttl>30</ttl>
+<item>
+	<title>Split flap</title>
+	<link>http://{{host}}/video/{{filename}}</link>
+	<description>Split flap</description>
+	<guid isPermaLink="false">{{hash}}</guid>
+	<media:content url="http://{{host}}/video/{{filename}}" fileSize="{{filesize}}" type="video/mp4" medium="video"/>
+</item>
+</channel>
+</rss>

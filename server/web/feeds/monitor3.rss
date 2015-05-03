@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
-<title>test</title>
+<title>re:publica split flap monitor3</title>
 <link>http://100.127.229.25/feeds/monitor3.rss</link>
-<description>test</description>
+<description>re:publica split flap monitor3</description>
 <ttl>30</ttl>
 <item>
-	<title>test</title>
-	<link>http://100.127.229.25/video/welcome.mp4</link>
-	<description>test</description>
-	<guid isPermaLink="false">jSM5gSOW7Q22GzUC</guid>
-	<media:content url="http://100.127.229.25/video/welcome.mp4" fileSize="78423738" type="video/mp4" medium="video"/>
+	<title>Split flap</title>
+	<link>http://100.127.229.25/video/monitor3/2015-05-03T18:45_3nbaUWoyaCCRP$AU.mp4</link>
+	<description>Split flap</description>
+	<guid isPermaLink="false">3nbaUWoyaCCRP$AU</guid>
+	<media:content url="http://100.127.229.25/video/monitor3/2015-05-03T18:45_3nbaUWoyaCCRP$AU.mp4" fileSize="7472082" type="video/mp4" medium="video"/>
 </item>
 </channel>
 </rss>

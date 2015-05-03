@@ -4,3 +4,5 @@ node_modules/
 
 *.log
 server/data/knownHashs.json
+
+*.rss

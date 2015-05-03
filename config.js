@@ -11,9 +11,10 @@ var config = {
 	fps: 60,
 	backColor: [0,46,60],
 	sessions: {
-		future:          2*24*60*60,
+		future:        1.5*24*60*60,
+		loopTimeStep:         15*60,
 		updateDataEvery:      15*60,
-		forStep:              15*60
+		updateFeedEvery:       1*60
 	},
 	defaultFont: {
 		flapColor: [0,55,70],

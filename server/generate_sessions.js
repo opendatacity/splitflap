@@ -6,6 +6,10 @@ var Splitflap = require('../lib/splitflap.js');
 var pause = 15;
 var knownHashsFilename = './data/knownHashs.json';
 var videoFolder = './web/video/';
+var feedFolder = './web/feeds/';
+var host = '100.127.229.25';
+
+var feedTemplate = fs.readFileSync('./data/feed.template', 'utf8');
 
 var flaps = [
 	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
@@ -50,11 +54,47 @@ Splitflap(flaps, function (splitflap) {
 	var todoCount = 0;
 	var todoRunning = false;
 
-	checkData(splitflap);
-	//setInterval(
-	//	function () { checkData(splitflap) },
-	//	c.sessions.updateDataEvery*1000
-	//)
+	checkData();
+	setInterval(checkData, c.sessions.updateDataEvery*1000);
+
+	checkFeed();
+	setInterval(checkFeed, c.sessions.updateFeedEvery*1000);
+
+	function checkFeed() {
+		console.log('checkFeed');
+
+		var time = (new Date()).getTime();
+
+		monitore.forEach(function (monitor) {
+			monitor = monitor.name;
+			var nextEntry = false;
+			Object.keys(queue).forEach(function (key) {
+				var entry = queue[key];
+				if (entry.monitor != monitor) return;
+				if (entry.startTime > time) return;
+				if (!nextEntry) return (nextEntry = entry);
+				if (nextEntry.startTime < entry.startTime) nextEntry = entry;
+			})
+
+			if (!nextEntry) return console.error('Entry not found');
+
+			var feed = feedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
+				key = key.substr(2, key.length-4);
+				switch (key) {
+					case 'monitor': return monitor;
+					case 'host': return host;
+					case 'filename': return nextEntry.filename;
+					case 'hash': return nextEntry.hash;
+					case 'filesize': return nextEntry.filesize;
+					default:
+						console.error('Unknown template key "'+key+'"');
+				}
+			})
+			var filename = feedFolder+monitor+'.rss';
+			console.log('Write "'+filename+'"');
+			fs.writeFileSync(filename, feed, 'utf8');
+		})
+	}
 
 	function checkTodo() {
 		if (todoRunning) return;
@@ -67,6 +107,8 @@ Splitflap(flaps, function (splitflap) {
 			return;
 		}
 
+		console.log('checkTodo');
+
 		_todos.sort(function (a,b) { return b.order - a.order; })
 		var todo = _todos.pop();
 
@@ -75,7 +117,11 @@ Splitflap(flaps, function (splitflap) {
 			checkFolder(path.dirname(videoFolder+todo.filename));
 			fs.renameSync(videoFolder+'temp.mp4', videoFolder+todo.filename)
 
-			knownHashs[todo.hash] = todo.filename;
+			knownHashs[todo.hash] = {
+				filename: todo.filename,
+				filesize: fs.statSync(videoFolder+todo.filename).size
+			}
+
 			fs.writeFileSync(knownHashsFilename, JSON.stringify(knownHashs, null, '\t'), 'utf8');
 			
 			todoRunning = false;
@@ -86,13 +132,15 @@ Splitflap(flaps, function (splitflap) {
 	}
 
 	function checkData() {
+		console.log('checkData');
+
 		queue = {};
 		var sessions = loadData();
 		var time0 = (new Date()).getTime()/1000;
 		todoCount = 0;
 
-		for (var t = 0; t < c.sessions.future; t += c.sessions.forStep) {
-			var time = Math.floor((time0 + t)/c.sessions.forStep)*c.sessions.forStep;
+		for (var t = 0; t < c.sessions.future; t += c.sessions.loopTimeStep) {
+			var time = Math.floor((time0 + t)/c.sessions.loopTimeStep)*c.sessions.loopTimeStep;
 			var time_str = (new Date((time+2*3600)*1000)).toISOString().substr(0,16);
 
 			monitore.forEach(function (monitor) {
@@ -107,7 +155,7 @@ Splitflap(flaps, function (splitflap) {
 						if ((session.beginT <= time) && (time <= session.endT)) s0 = session;
 						if (session.beginT > time) {
 							if (!s1) {
-								 s1 = session;
+								s1 = session;
 							} else {
 								if (session.beginT < s1.beginT) s1 = session;
 							}
@@ -130,11 +178,14 @@ Splitflap(flaps, function (splitflap) {
 				screenplay.push(state0);
 
 				var hash = splitflap.getHash(screenplay);
-				if (!queue[hash]) {
+
+				if (knownHashs[hash] && !queue[hash]) {
 					queue[hash] = {
 						hash:hash,
-						startTime:(new Date(time*1000)),
-						filename:monitor.name+'/'+time_str+'_'+hash+'.mp4'
+						monitor:monitor.name,
+						startTime:(new Date(time*1000)).getTime(),
+						filename:knownHashs[hash].filename,
+						filesize:knownHashs[hash].filesize
 					}
 				}
 				if (!knownHashs[hash] && !todos[hash]) {
@@ -168,6 +219,7 @@ function sessionTime(session) {
 
 function loadData() {
 	var sessions = JSON.parse(fs.readFileSync('./data/sessions.json', 'utf8'));
+
 	sessions = sessions.filter(function (session) {
 		if (!session.begin) return false;
 		if (!session.end) return false;
