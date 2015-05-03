@@ -3,7 +3,7 @@ var path = require('path');
 var c = require('../config.js');
 var Splitflap = require('../lib/splitflap.js');
 
-var pause = 0;
+var pause = 15;
 var knownHashsFilename = './data/knownHashs.json';
 var videoFolder = './web/video/';
 
@@ -46,6 +46,7 @@ if (fs.existsSync(knownHashsFilename)) {
 
 Splitflap(flaps, function (splitflap) {
 	var todos = {};
+	var queue = {};
 	var todoCount = 0;
 	var todoRunning = false;
 
@@ -85,6 +86,7 @@ Splitflap(flaps, function (splitflap) {
 	}
 
 	function checkData() {
+		queue = {};
 		var sessions = loadData();
 		var time0 = (new Date()).getTime()/1000;
 		todoCount = 0;
@@ -128,6 +130,13 @@ Splitflap(flaps, function (splitflap) {
 				screenplay.push(state0);
 
 				var hash = splitflap.getHash(screenplay);
+				if (!queue[hash]) {
+					queue[hash] = {
+						hash:hash,
+						startTime:(new Date(time*1000)),
+						filename:monitor.name+'/'+time_str+'_'+hash+'.mp4'
+					}
+				}
 				if (!knownHashs[hash] && !todos[hash]) {
 					todos[hash] = {
 						hash:hash,
