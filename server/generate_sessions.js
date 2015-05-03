@@ -2,7 +2,7 @@ var fs = require('fs');
 var c = require('../config.js');
 var Splitflap = require('../lib/splitflap.js');
 
-var pause = 10;
+var pause = 20;
 
 var flaps = [
 	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
