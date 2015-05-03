@@ -17,19 +17,19 @@ var config = {
 		fontColor: [255,255,255],
 		fontName: './fonts/helvetica_neue_condensed_400.ttf',
 		fontSize: 60,
-		letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥@#?!/\"\':-…,.',
+		letters: ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789♥&@#?!/()\"\':=+-…,.',
 		name: 'normal',
 	},
 	fonts: [
-		{ name: '100', fontName: './fonts/helvetica_neue_condensed_100.ttf' },
-		{ name: '200', fontName: './fonts/helvetica_neue_condensed_200.ttf' },
-		{ name: '300', fontName: './fonts/helvetica_neue_condensed_300.ttf' },
+		//{ name: '100', fontName: './fonts/helvetica_neue_condensed_100.ttf' },
+		//{ name: '200', fontName: './fonts/helvetica_neue_condensed_200.ttf' },
+		//{ name: '300', fontName: './fonts/helvetica_neue_condensed_300.ttf' },
 		{ name: '400', fontName: './fonts/helvetica_neue_condensed_400.ttf' },
-		{ name: '500', fontName: './fonts/helvetica_neue_condensed_500.ttf' },
-		{ name: '600', fontName: './fonts/helvetica_neue_condensed_600.ttf' },
-		{ name: '700', fontName: './fonts/helvetica_neue_condensed_700.ttf' },
+		//{ name: '500', fontName: './fonts/helvetica_neue_condensed_500.ttf' },
+		//{ name: '600', fontName: './fonts/helvetica_neue_condensed_600.ttf' },
+		//{ name: '700', fontName: './fonts/helvetica_neue_condensed_700.ttf' },
 		{ name: '800', fontName: './fonts/helvetica_neue_condensed_800.ttf' },
-		{ name: '900', fontName: './fonts/helvetica_neue_condensed_900.ttf' }
+		//{ name: '900', fontName: './fonts/helvetica_neue_condensed_900.ttf' }
 	]
 }
 
