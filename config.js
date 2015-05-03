@@ -10,6 +10,11 @@ var config = {
 	flapGap2: 10,
 	fps: 60,
 	backColor: [0,46,60],
+	sessions: {
+		future: 7*24*60*60,
+		every:       15*60,
+		step:         5*60
+	},
 	defaultFont: {
 		flapColor: [0,55,70],
 		flapHeight: 80,
