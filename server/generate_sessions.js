@@ -57,8 +57,8 @@ Splitflap(flaps, function (splitflap) {
 	checkData();
 	setInterval(checkData, c.sessions.updateDataEvery*1000);
 
-	checkFeed();
-	setInterval(checkFeed, c.sessions.updateFeedEvery*1000);
+	//checkFeed();
+	//setInterval(checkFeed, c.sessions.updateFeedEvery*1000);
 
 	function checkFeed() {
 		console.log('checkFeed');
