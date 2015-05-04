@@ -9,7 +9,7 @@ var knownHashsFilename = './data/knownHashs.json';
 var videoFolder = './web/video/';
 var feedFolder = './web/feeds/';
 
-var feedTemplate = fs.readFileSync('./data/feed.template', 'utf8');
+var videoFeedTemplate = fs.readFileSync('./data/feed_video.template', 'utf8');
 
 var flaps = [
 	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
@@ -78,7 +78,7 @@ Splitflap(flaps, function (splitflap) {
 
 			if (!nextEntry) return console.error('Entry not found');
 
-			var feed = feedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
+			var feed = videoFeedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
 				key = key.substr(2, key.length-4);
 				switch (key) {
 					case 'monitor': return monitor;
