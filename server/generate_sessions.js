@@ -219,7 +219,12 @@ function sessionTime(session) {
 }
 
 function loadData() {
-	var sessions = JSON.parse(fs.readFileSync('./data/sessions.json', 'utf8'));
+	var sessions;
+	try {
+		sessions = JSON.parse(fs.readFileSync('./data/sessions.json', 'utf8'));
+	} catch (e) {
+		sessions = [];
+	}
 
 	request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
 
