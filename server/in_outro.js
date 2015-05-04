@@ -17,67 +17,98 @@ var flaps = [
 var pause = 10;
 var empty = {title:'', text:''};
 
-var intro = {
-	title:'intro',
-	filename:'intro.mp4',
-	screenplay: [
-		empty,0,
-		{
-			title:'Hello Earthling!',
-			text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!'
-		}, pause,
-		{
-			title:'Hallo Erdling!',
-			text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!'
-		}, pause,
-		{
-			title:'Salve terrestre!',
-			text: 'Benvenuto a re:publica 2015! Mentre aspettiamo per il decollo, fai attenzione a eventuali forme di vita inattese e abbracciatele subito!'
-		}, pause,
-		{
-			title:'¡Hola, terrícola!',
-			text: 'Bienvenido a re:publica 2015. Mientras esperamos el despegue, ¡preste atención a formas de vida desatendidas y dales un abrazo!'
-		}, pause,
-		{
-			title:'Salut terrien!',
-			text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.'
-		}, pause,
-		empty
-	]
-}
-
-var outro = {
-	title:'outro',
-	filename:'outro.mp4',
-	screenplay: [
-		empty,0,
-		{
-			title:'OMG, it\'s over…',
-			text: 'We hope you had a fabulous re:publica! Now party all night long! See you at #rp16! And don\'t forget to call your MAMAAA!'
-		}, pause,
-		{
-			title:'OMG, und schon ist es vorbei…',
-			text: 'Hoffentlich hattet ihr alle eine wunderbare re:publica! Jetzt wird gefeiert! Wir sehen uns auf der #rp16! And don\'t forget to call your MAMAAA!'
-		}, pause,
-		{
-			title:'OMG, è già finito…',
-			text: 'Speriamo che re:publica sia stata favolosa per tutti voi! Allora...facciamo festa tutta la notte! Ci vediamo a #rp16! And don\'t forget to call your MAMAAA!'
-		}, pause,
-		{
-			title:'OMG, ya se acabó…',
-			text: 'Esperamos che hayáis tenido una re:publica fantástica! Y ahora: ¡fiesta toda la noche! Nos vemos a #rp16! And don\'t forget to call your MAMAAA!'
-		}, pause,
-		{
-			title:'OMG c\'est fini…',
-			text: 'nous espérons que vous avez eu une re:publica formidable! Alors, passez la nuit à danser! On se revoit à #16! And don\'t forget to call your MAMAAA!'
-		}, pause,
-		empty
-	]
-}
+var todos = [
+	{
+		title:'intro1',
+		filename:'intro1.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'Hello Earthling!', text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!' }, pause,
+			{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
+			empty
+		]
+	},
+	{
+		title:'intro2',
+		filename:'intro2.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'Salve terrestre!', text: 'Benvenuto a re:publica 2015! Mentre aspettiamo per il decollo, fai attenzione a eventuali forme di vita inattese e abbracciatele subito!' }, pause,
+			{ title:'¡Hola, terrícola!', text: 'Bienvenido a re:publica 2015. Mientras esperamos el despegue, ¡preste atención a formas de vida desatendidas y dales un abrazo!' }, pause,
+			empty
+		]
+	},
+	{
+		title:'intro3',
+		filename:'intro3.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
+			{ title:'Salut terrien!', text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.' }, pause,
+			empty
+		]
+	},
+	{
+		title:'intro',
+		filename:'intro.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'Hello Earthling!', text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!' }, pause,
+			{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
+			{ title:'Salve terrestre!', text: 'Benvenuto a re:publica 2015! Mentre aspettiamo per il decollo, fai attenzione a eventuali forme di vita inattese e abbracciatele subito!' }, pause,
+			{ title:'¡Hola, terrícola!', text: 'Bienvenido a re:publica 2015. Mientras esperamos el despegue, ¡preste atención a formas de vida desatendidas y dales un abrazo!' }, pause,
+			{ title:'Salut terrien!', text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.' }, pause,
+			empty
+		]
+	},
+	{
+		title:'outro1',
+		filename:'outro1.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'OMG, it\'s over…', text: 'We hope you had a fabulous re:publica! Now party all night long! See you at #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG, und schon ist es vorbei…', text: 'Hoffentlich hattet ihr alle eine wunderbare re:publica! Jetzt wird gefeiert! Wir sehen uns auf der #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			empty
+		]
+	},
+	{
+		title:'outro2',
+		filename:'outro2.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'OMG, è già finito…', text: 'Speriamo che re:publica sia stata favolosa per tutti voi! Allora...facciamo festa tutta la notte! Ci vediamo a #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG, ya se acabó…', text: 'Esperamos che hayáis tenido una re:publica fantástica! Y ahora: ¡fiesta toda la noche! Nos vemos a #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			empty
+		]
+	},
+	{
+		title:'outro3',
+		filename:'outro3.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'OMG, und schon ist es vorbei…', text: 'Hoffentlich hattet ihr alle eine wunderbare re:publica! Jetzt wird gefeiert! Wir sehen uns auf der #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG c\'est fini…', text: 'nous espérons que vous avez eu une re:publica formidable! Alors, passez la nuit à danser! On se revoit à #16! And don\'t forget to call your MAMAAA!' }, pause,
+			empty
+		]
+	},
+	{
+		title:'outro',
+		filename:'outro.mp4',
+		screenplay: [
+			empty,0,
+			{ title:'OMG, it\'s over…', text: 'We hope you had a fabulous re:publica! Now party all night long! See you at #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG, und schon ist es vorbei…', text: 'Hoffentlich hattet ihr alle eine wunderbare re:publica! Jetzt wird gefeiert! Wir sehen uns auf der #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG, è già finito…', text: 'Speriamo che re:publica sia stata favolosa per tutti voi! Allora...facciamo festa tutta la notte! Ci vediamo a #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG, ya se acabó…', text: 'Esperamos che hayáis tenido una re:publica fantástica! Y ahora: ¡fiesta toda la noche! Nos vemos a #rp16! And don\'t forget to call your MAMAAA!' }, pause,
+			{ title:'OMG c\'est fini…', text: 'nous espérons que vous avez eu une re:publica formidable! Alors, passez la nuit à danser! On se revoit à #16! And don\'t forget to call your MAMAAA!' }, pause,
+			empty
+		]
+	}
+]
 
 Splitflap(flaps, function (splitflap) {
 	async.eachSeries(
-		[intro, outro],
+		todos,
 		function (movie, callback) {
 			console.log('Render "'+movie.title+'"');
 			splitflap.renderMovie(movie.screenplay, movie.filename, callback);
