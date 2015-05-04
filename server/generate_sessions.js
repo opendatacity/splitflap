@@ -226,7 +226,7 @@ function loadData() {
 		console.log('sessions.json loaded');
 	} catch (e) {
 		sessions = [];
-		console.log('sessions.json defect, starting with []');
+		console.log('sessions.json defect, starting with [], error was "'+e+'"');
 	}
 
 	request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
