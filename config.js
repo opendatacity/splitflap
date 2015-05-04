@@ -36,7 +36,8 @@ var config = {
 		//{ name: '700', fontName: './fonts/helvetica_neue_condensed_700.ttf' },
 		{ name: '800', fontName: './fonts/helvetica_neue_condensed_800.ttf' },
 		//{ name: '900', fontName: './fonts/helvetica_neue_condensed_900.ttf' }
-	]
+	],
+	host: '100.127.229.25'
 }
 
 config.fonts.forEach(function (font) {

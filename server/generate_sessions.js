@@ -8,7 +8,6 @@ var pause = 15;
 var knownHashsFilename = './data/knownHashs.json';
 var videoFolder = './web/video/';
 var feedFolder = './web/feeds/';
-var host = '100.127.229.25';
 
 var feedTemplate = fs.readFileSync('./data/feed.template', 'utf8');
 
@@ -83,7 +82,7 @@ Splitflap(flaps, function (splitflap) {
 				key = key.substr(2, key.length-4);
 				switch (key) {
 					case 'monitor': return monitor;
-					case 'host': return host;
+					case 'host': return c.host;
 					case 'filename': return nextEntry.filename;
 					case 'hash': return nextEntry.hash;
 					case 'filesize': return nextEntry.filesize;
