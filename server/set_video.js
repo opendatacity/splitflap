@@ -39,7 +39,7 @@ monitore.forEach(function (monitor) {
 			case 'monitor': return monitor;
 			case 'host': return c.host;
 			case 'filename': return filename;
-			case 'hash': return filename;
+			case 'hash': return (Math.random()*10000000000).toFixed(0);
 			case 'filesize': return filesize;
 			default:
 				console.error('Unknown template key "'+key+'"');
