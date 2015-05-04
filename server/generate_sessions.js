@@ -165,7 +165,7 @@ Splitflap(flaps, function (splitflap) {
 
 					var state = {
 						header:   stage,
-						time1:    s0 ? 'now running: '+sessionTime(s0) : 'ready for boarding …',
+						time1:    s0 ? 'now running: '+sessionTime(s0) : 'ready for boarding',
 						title1:   s0 ? s0.title : '',
 						speaker1: s0 ? s0.speakers : '',
 						time2:    s1 ? 'next: '+sessionTime(s1) : '',
