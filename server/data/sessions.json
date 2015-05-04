@@ -586,7 +586,7 @@
 		"speakers": [
 			{
 				"id": "rp15-speaker-168",
-				"name": "Sebastian Vollnhals"
+				"name": "♥ Sebastian Vollnhals"
 			},
 			{
 				"id": "rp15-speaker-680",
@@ -597,7 +597,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430664911.256
 	},
 	{
 		"id": "rp15-session-3164",
@@ -1995,7 +1995,11 @@
 		"end": null,
 		"duration": 0,
 		"day": false,
-		"location": null,
+		"location": {
+			"id": "rp15-location-6148",
+			"label_en": "re:publica",
+			"label_de": "re:publica"
+		},
 		"track": {
 			"id": "culture",
 			"label_de": "Kultur",
@@ -2040,7 +2044,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430671330.873
 	},
 	{
 		"id": "rp15-session-3307",
@@ -2136,9 +2140,9 @@
 			]
 		},
 		"format": {
-			"id": "workshop",
-			"label_de": "Workshop",
-			"label_en": "Workshop"
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
 		},
 		"level": {
 			"id": "beginner",
@@ -2172,7 +2176,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430682431.106
 	},
 	{
 		"id": "rp15-session-3328",
@@ -3549,8 +3553,8 @@
 	{
 		"id": "rp15-session-3422",
 		"title": "Lightning Talks mit den Digital Media Women",
-		"abstract": "Die Digital Media Women (#DMW) sind ein bundesweites Netzwerk von Frauen aus der Digitalwirtschaft.",
-		"description": "In Hamburg gegründet, arbeitet das Netzwerk inzwischen als gemeinnütziger Verein mit Quartieren in Berlin, Köln, München und der Region Rhein-Main bundesweit daran, dass dieser Satz gesellschaftliche Realität wird:\n\nFrauen aus digitalen Branchen sind selbstverständlich überall präsent.\n\nAwareness: Wo immer möglich, schärfen die #DMW das gesellschaftliche Bewusstsein dafür, mehr kompetente Frauen in der Öffentlichkeit präsent werden zu lassen.\n\nEnabling: Nach dem Motto 'machen statt schnacken' arbeiten die #DMW mit Weiterbildungs-Veranstaltungen, Veröffentlichungen von Experten-Wissen und Aktionen daran, dass Frauen ihre Eigenmarketing-Skills optimieren und an Selbstvertrauen gewinnen.\n\nLobbying: Die #DMW setzen sich auch gegenüber Politik, Wirtschaft und Medien für ihr Anliegen ein. Immer mehr werden sie in der öffentlichen Wahrnehmung zum Kristallisations-Punkt bezüglich der Themen ihrer Agenda.\n\nWie bereits im vergangen Jahr, präsentieren die #DMW inspirierende Frauen, die von ihren aktuellen Projekten und Erfahrungen erzählen und euch daran teilhaben lassen. Im Anschluss an die Lightning Talks laden sie wieder zu ihrem Meet-up vor der re:fill Bar zum gegenseitigen Kennenlernen und Netzwerken ein.\n",
+		"abstract": "Die Digital Media Women (#DMW) sind ein bundesweites Netzwerk von Frauen aus der Digitalwirtschaft. Wie bereits im vergangen Jahr, präsentieren die #DMW inspirierende Frauen, die von ihren aktuellen Projekten und Erfahrungen erzählen und euch daran teilhaben lassen. Im Anschluss an die Lightning Talks laden sie wieder zu ihrem Meet-up vor der re:fill Bar zum gegenseitigen Kennenlernen und Netzwerken ein.",
+		"description": "In Hamburg gegründet, arbeitet das Netzwerk inzwischen als gemeinnütziger Verein mit Quartieren in Berlin, Köln, München und der Region Rhein-Main bundesweit daran, dass dieser Satz gesellschaftliche Realität wird:\n\nFrauen aus digitalen Branchen sind selbstverständlich überall präsent.\n\nAwareness: Wo immer möglich, schärfen die #DMW das gesellschaftliche Bewusstsein dafür, mehr kompetente Frauen in der Öffentlichkeit präsent werden zu lassen.\n\nEnabling: Nach dem Motto 'machen statt schnacken' arbeiten die #DMW mit Weiterbildungs-Veranstaltungen, Veröffentlichungen von Experten-Wissen und Aktionen daran, dass Frauen ihre Eigenmarketing-Skills optimieren und an Selbstvertrauen gewinnen.\n\nLobbying: Die #DMW setzen sich auch gegenüber Politik, Wirtschaft und Medien für ihr Anliegen ein. Immer mehr werden sie in der öffentlichen Wahrnehmung zum Kristallisations-Punkt bezüglich der Themen ihrer Agenda.\n\nWie bereits im vergangen Jahr, präsentieren die #DMW inspirierende Frauen, die von ihren aktuellen Projekten und Erfahrungen erzählen und euch daran teilhaben lassen. Im Anschluss an die Lightning Talks laden sie wieder zu ihrem Meet-up vor der re:fill Bar zum gegenseitigen Kennenlernen und Netzwerken ein:\n\nSanja Stankovic: Fünf Jahre Digital Media Women e.V.\n\nAcht Frauen begannen 2010 mit einer Vision, viel Leidenschaft und dem Willen etwas zu verändern. Heute werden die Digital Media Women von über 60 Frauen in fünf Städten aktiv mitgestaltet, in der Community bewegen sich 3.000 Frauen und Männer und allein in 2014 haben wir bundesweit 50 Events organisiert. Migründerin Sanja erzählt was war, was kommt und wofür wir stehen.\n\nFrederike Kaltheuner: Daten, Algorithmen und (un)absichtliche Diskriminierung\n\nDer Facebook Newsfeed, personalisierte Werbung, die SCHUFA-Bonitätsprüfung – überall treffen Algorithmen Entscheidungen für uns und über uns. Aber spielt es eine Rolle wer den Code programmiert? Anhand von drei kurzen Beispielen zeige ich warum Vielfalt in technischen Berufen immer wichtiger wird.\n\nAnastasia Umrik: “anderFashion – eine Modenschau der besonderen Art”\n\nanderFashion, eine Modenschau der besonderen Art, bei der lokale Jungdesigner 1 x jährlich einen Laufsteg zur Präsentation ihrer Werke zur Verfügung gestellt bekommen. Zunächst klingt die Beschreibung des Vorhabens unspektakulär. Bei genauerem Hinsehen ist die Show jedoch alles andere als gewöhnlich. Denn: Einige der Models haben eine sichtbare körperliche Behinderung.\n\nUte Blindert: Wie es ist, ein Buch zu schreiben\n\nEin Buch zu schreiben, ist nicht gerade leicht. In ihrem Talk beleuchtet Ute Blindert, wie sie es schaffte, bei ihrem Lieblingsverlag zu landen und auch noch über ihr Herzensthema zu schreiben, inklusive Projektmanagement und Korrekturschleifen.\n\n \n\n \n",
 		"url": "http://re-publica.de/session/lightning-talks-den-digital-media-women",
 		"begin": "2015-05-06T16:45:00.000Z",
 		"end": "2015-05-06T17:45:00.000Z",
@@ -3614,7 +3618,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430689870.299
 	},
 	{
 		"id": "rp15-session-3425",
@@ -5459,13 +5463,13 @@
 			"label_de": "STG-7"
 		},
 		"track": {
-			"id": "re-cord-musicday",
-			"label_de": "re:cord Musicday",
-			"label_en": "re:cord Musicday",
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation",
 			"color": [
-				51,
-				204,
-				102,
+				196,
+				55,
+				8,
 				1
 			]
 		},
@@ -5498,7 +5502,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430678830.461
 	},
 	{
 		"id": "rp15-session-3553",
@@ -5636,13 +5640,17 @@
 		"id": "rp15-session-3563",
 		"title": "Co-creating Europe ",
 		"abstract": "Co-creating Europe is possible. Europe belongs to us, the citizens. We can determine its direction. But that also means: we need to start now. We'll collect original, transnational ideas that foster connection in Europe and share them with the Community of the European idea challenge Advocate Europe. >> \r\n\r\nEuropa kollaborativ gestalten ist möglich. Europa gehört uns, den Bürgern. Wir dürfen die Bedenkenträger und die Populisten gerne mal ignorieren. Wir müssen jetzt loslegen – über Disziplinen und Denkschulen hinweg. Wir laden ein, Ideen für Europa zu teilen. Und unterstützen dabei, diese in konkrete Vorhaben zu gießen. Geteilt werden sie mit der europaweiten Community des Ideenwettbewerbs Advocate Europe, der unkonventionelle, transnationale Ideen zur Stärkung des Zusammenhalts in Europa fördert. \r\n",
-		"description": "Europa braucht neue Formate, die es uns Menschen, die ihren Lebensmittelpunkt in Europa haben, erlauben, die Zukunft des Kontinents mitzugestalten. In unserer Aktion/Session laden wir dazu ein, bei einer „re:publica Version“ des Ideenwettbewerbs „Advocate Europe“ mitzumachen. Dieser widmet sich dem Finden und Fördern innovativer Vorhaben zum Thema Europa. Wir wenden uns an Akteure der Zivilgesellschaft, die Anschubfinanzierung und Unterstützung suchen, um ihre nachhaltigen Ideen in den Feldern politische Bildung, Kunst und Kultur, Demokratie und Partizipation oder innovativen Formen der Themenanwaltschaft umzusetzen.\n\n> Europe needs new formats that allow citzens to co-create the future of the continent. During our session we'll invite you to join a mini-republica edition of the \"Advocate Europe\" idea challenge. \"Advocate Europe\" is open to civil society actors who seek financing and support to realise sustainable ideas.  We are looking for original and transnational project proposals that foster connection and cohesion in Europe. These can come from fields as diverse as civic education, arts and culture or social innovation.  \n\nIn der Aktion laden wir euch in einen digital-analogen europaweiten Raum für kreatives Projektdesign und „Co-Creation“ in Europa ein: Nach einem Einstieg in das Thema „Frische Ideen für Europa“ entwickelt ihr eure Idee für Europa (weiter) – unabhängig davon ob ihr Anfänger oder Experten in dem Bereich seid. Gerne in Teams, oder auch allein. Mithilfe kreativer Methoden des Projektdesigns (Prototyping, Design Thinking-Stil) lernt ihr, aus eurer Idee einen Prototypen für ein Vorhaben oder ein Projekt zu bauen. Im nächsten Schritt könnt ihr eure in der Aktion/Session entwickelten Prototypen auf der digitalen Ideenplattform www.advocate-europe.eu teilen. Teilnehmende und (wenn möglich) weitere Teilnehmer der re:publica wählen bis zum 7.5.2015 die beste Projektidee aus. Die Gewinner erhalten ein Projektcoaching und werden in das Netzwerk der „Advocate Europe“-Initiativen aufgenommen. \n\n> In our action you'll be invited to join our digital-and-analog space for creative project design and co-creation in Europe: A short intro and then it's up to you to come up with some fresh and wild ideas for Europe - no matter if you're an expert in the field or totally new. In teams, or alone, as you wish. We'll share some tools for project design (prototyping, design thinking-style) to build a project proposal.Then you can share your ideas on our platform, where we'll hold a voting until May 7, 2015 in order to find the best \"Advocate Europe\" idea at republica 2015. The winner receives a project coaching and will become part of the \"Advocate Europe\" network.\n\nJoin us on Tuesday 5/5, 2 P.M. or Wednesday 6/5, 2 P.M., find us on twitter through #AdvocateEurope, @juliamosaique or @rbrues\n\nLet us know if you're coming!  \n",
+		"description": "Europa braucht neue Formate, die es uns Menschen, die ihren Lebensmittelpunkt in Europa haben, erlauben, die Zukunft des Kontinents mitzugestalten. In unserer Aktion/Session laden wir dazu ein, bei einer „re:publica Version“ des Ideenwettbewerbs „Advocate Europe“ mitzumachen. Dieser widmet sich dem Finden und Fördern innovativer Vorhaben zum Thema Europa. Wir wenden uns an Akteure der Zivilgesellschaft, die Anschubfinanzierung und Unterstützung suchen, um ihre nachhaltigen Ideen in den Feldern politische Bildung, Kunst und Kultur, Demokratie und Partizipation oder innovativen Formen der Themenanwaltschaft umzusetzen.\n\n> Europe needs new formats that allow citzens to co-create the future of the continent. During our session we'll invite you to join a mini-republica edition of the \"Advocate Europe\" idea challenge. \"Advocate Europe\" is open to civil society actors who seek financing and support to realise sustainable ideas.  We are looking for original and transnational project proposals that foster connection and cohesion in Europe. These can come from fields as diverse as civic education, arts and culture or social innovation.  \n\nIn der Aktion laden wir euch in einen digital-analogen europaweiten Raum für kreatives Projektdesign und „Co-Creation“ in Europa ein: Nach einem Einstieg in das Thema „Frische Ideen für Europa“ entwickelt ihr eure Idee für Europa (weiter) – unabhängig davon ob ihr Anfänger oder Experten in dem Bereich seid. Gerne in Teams, oder auch allein. Mithilfe kreativer Methoden des Projektdesigns (Prototyping, Design Thinking-Stil) lernt ihr, aus eurer Idee einen Prototypen für ein Vorhaben oder ein Projekt zu bauen. Im nächsten Schritt könnt ihr eure in der Aktion/Session entwickelten Prototypen auf der digitalen Ideenplattform www.advocate-europe.eu teilen. Teilnehmende und (wenn möglich) weitere Teilnehmer der re:publica wählen bis zum 7.5.2015 die beste Projektidee aus. Die Gewinner erhalten ein Projektcoaching und werden in das Netzwerk der „Advocate Europe“-Initiativen aufgenommen. \n\n> In our action you'll be invited to join our digital-and-analog space for creative project design and co-creation in Europe: A short intro and then it's up to you to come up with some fresh and wild ideas for Europe - no matter if you're an expert in the field or totally new. In teams, or alone, as you wish. We'll share some tools for project design (prototyping, design thinking-style) to build a project proposal. Then you can share your ideas on our platform, where we'll hold a voting until May 7, 2015 in order to find the best \"Advocate Europe\" idea at republica 2015. The winner receives a project coaching and will become part of the \"Advocate Europe\" network.\n\nJoin us on Tuesday 5/5, 2 P.M. or Wednesday 6/5, 2 P.M., find us on twitter through #AdvocateEurope, @juliamosaique or @rbrues\n\nLet us know if you're coming!  \n",
 		"url": "http://re-publica.de/session/co-creating-europe",
 		"begin": null,
 		"end": null,
 		"duration": 0,
 		"day": false,
-		"location": null,
+		"location": {
+			"id": "rp15-location-6148",
+			"label_en": "re:publica",
+			"label_de": "re:publica"
+		},
 		"track": {
 			"id": "politics-society",
 			"label_de": "Politik & Gesellschaft",
@@ -5683,7 +5691,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430672051.902
 	},
 	{
 		"id": "rp15-session-3564",
@@ -6587,13 +6595,17 @@
 			{
 				"id": "rp15-speaker-4946",
 				"name": "Arne Busse"
+			},
+			{
+				"id": "rp15-speaker-5163",
+				"name": "Marie  Meimberg"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430681710.593
 	},
 	{
 		"id": "rp15-session-3648",
@@ -8795,13 +8807,17 @@
 			{
 				"id": "rp15-speaker-3601",
 				"name": "Thomas Renger"
+			},
+			{
+				"id": "rp15-speaker-387",
+				"name": "Kathrin Passig"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430665263.177
 	},
 	{
 		"id": "rp15-session-3819",
@@ -9456,6 +9472,64 @@
 		"last_modified": 1430664096.385
 	},
 	{
+		"id": "rp15-session-3852",
+		"title": "LobbyPlag V3 – Datenschutz ade.",
+		"abstract": "Die Datenschutz-Reform in der EU endete mit einem Kompromissvorschlag, der gerade jetzt im Europa-Rat diskutiert wird. Geleakte Dokumente zeigen aber: Speziell Deutsche Politiker torpedieren Datenschutz-Bestrebungen. Wir geben einen Überblick.",
+		"description": "Mehrere tausend Seiten geleakter interner Dokumente belegen: Deutschland ist einer der Hauptakteure, wenn es um das Beschneiden des Datenschutzes geht. Wir begleiten mit unserer Plattform LobbyPlag seit drei Jahren die Datenschutzreform - und werden erklären, an welchen Stellen Lobbyisten Einfluss auf die Gesetzgebung genommen haben und was die jüngsten Veröffentlichungen der internen Rats-Dokumente bedeuten.\n",
+		"url": "http://re-publica.de/session/lobbyplag-v3-datenschutz-ade",
+		"begin": "2015-05-07T08:00:00.000Z",
+		"end": "2015-05-07T08:30:00.000Z",
+		"duration": 1800,
+		"day": {
+			"id": "rp15-day-3",
+			"label_de": "7. Mai",
+			"label_en": "May 7",
+			"date": "2015-05-07"
+		},
+		"location": {
+			"id": "rp15-location-5935",
+			"label_en": "STG-8",
+			"label_de": "STG-8"
+		},
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society",
+			"color": [
+				112,
+				77,
+				133,
+				1
+			]
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			{
+				"id": "rp15-speaker-168",
+				"name": "♥ Sebastian Vollnhals"
+			}
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp15",
+		"type": "session",
+		"last_modified": 1430673131.667
+	},
+	{
 		"id": "rp15-session-3853",
 		"title": "The War on Concepts",
 		"abstract": "The war on concepts is being waged globally, with the aim of enforcing the military-security complex. These global \"wars\" are against drugs, terrorism, the internet, and whistleblowers. \r\n\r\nHow are they interconnected, what are we facing, and what can we do?",
@@ -9517,7 +9591,7 @@
 		"id": "rp15-session-3854",
 		"title": "Blick über den Tellerrand – Food Blogging 2.0",
 		"abstract": "What’s cooking? Deutsche Food Blogs haben längst mehr zu bieten als hübsche Fotos und pfiffige Rezepte. Ihre Autoren sind zu Aktivisten, Meinungsmachern und Entrepreneuren geworden – und ihre Leser Teil einer Bewegung.",
-		"description": "Die deutschsprachige Food-Blogosphäre hat sich rasant entwickelt. Ähnlich wie die Mode- oder Reiseblogszene haben sich deutsche Food Blogger professionalisiert und kommerzialisiert. Doch einigen von ihnen ist das nicht genug.\n\nFood Blogger 2.0 sind Aktivisten, Meinungsmacher, Entrepreneure, die mehr posten als bloß hübsche Fotos und pfiffige Rezepte. Sie erzählen die Geschichten zu Produkten, treffen Landwirte und Lobbyisten, regen Diskussionen an und nehmen so Einfluss auf Industrie und Politik. Im Web aktive Foodies sind zu Kuratoren und Sachverständigen geworden, die einer stetig wachsenden Zahl von Followern neue Perspektiven auf ihre Ernährung und Lebensweise geben. Vom bloggenden Bäcker, der durch das Internet eine neue Nähe schafft, bis hin zum Facebook-Aktivisten, der sich für mehr Transparenz und eine andere Agrarpolitik einsetzt.\n\nWir wollen Beispiele beleuchten und fragen: Wie groß ist der Einfluss von Food Bloggern in Deutschland? Was bedeutet das für die Ernährungsindustrie – und was für die alteingesessenen Verlage? Wie sieht die Zukunft der Food Blogs aus? Achja, und was zu essen gibt es natürlich auch.\n\nModeratorin Eva Schulz diskutiert mit\n\nHendrik Haase - Der „Wurstsack“ ist in deutschen Markthallen, Metzgereien und seit neuestem auch immer wieder im Bundestag unterwegs. Als selbsternannter „Verteidigungsminister für das kulinarische Weltkulturerbe“ schaut er der Lebensmittelindustrie auf die Finger und informiert tausende Fans und Follower über neue Gesetze, miese Produktionsbedingungen und Lebensmittelverschwendung in Deutschland und der EU.\n\nMalin Elmlid - Ihr Herzensprojekt Bread Exchange wurde vom Hobby zur Bewegung. Über 1000 selbstgebackene Brote hat Malin mit ihren Lesern bereits getauscht – gegen exotische Zutaten aus aller Welt, Reitausflüge und Hotelübernachtungen, aber niemals gegen Geld. Sogar in Afghanistan bereitete Malin ihren Sauerteig schon zu. 2014 veröffentlichte sie ein Buch darüber, wie ein Backblog die Welt verändern kann.\n\nCarmen Hillebrand – Food Blogger 2.0 sind mit Produktproben, Essenseinladungen und althergebrachtem Social Media-Marketing kaum mehr zu begeistern – im Gegenteil: Im Januar 2015 löste das Facebook-Team von Bertolli mit #Pestogate einen „Dishstorm“ aus. Wie geht die Industrie mit den Foodies um? Was hat deren wachsender Einfluss für sie zu bedeuten? Das erklärt Carmen Hillebrand, Abteilungsleiterin Social Media & Content der Metro.\n",
+		"description": "Die deutschsprachige Food-Blogosphäre hat sich rasant entwickelt. Ähnlich wie die Mode- oder Reiseblogszene haben sich deutsche Food Blogger professionalisiert und kommerzialisiert. Doch einigen von ihnen ist das nicht genug.\n\nFood Blogger 2.0 sind Aktivisten, Meinungsmacher, Entrepreneure, die mehr posten als bloß hübsche Fotos und pfiffige Rezepte. Sie erzählen die Geschichten zu Produkten, treffen Landwirte und Lobbyisten, regen Diskussionen an und nehmen so Einfluss auf Industrie und Politik. Im Web aktive Foodies sind zu Kuratoren und Sachverständigen geworden, die einer stetig wachsenden Zahl von Followern neue Perspektiven auf ihre Ernährung und Lebensweise geben. Vom bloggenden Bäcker, der durch das Internet eine neue Nähe schafft, bis hin zum Facebook-Aktivisten, der sich für mehr Transparenz und eine andere Agrarpolitik einsetzt.\n\nWir wollen Beispiele beleuchten und fragen: Wie groß ist der Einfluss von Food Bloggern in Deutschland? Was bedeutet das für die Ernährungsindustrie – und was für die alteingesessenen Verlage? Wie sieht die Zukunft der Food Blogs aus? Achja, und was zu essen gibt es natürlich auch.\n\nModeratorin Eva Schulz diskutiert mit\n\nHendrik Haase - Der „Wurstsack“ ist in deutschen Markthallen, Metzgereien und seit neuestem auch immer wieder im Bundestag unterwegs. Als selbsternannter „Verteidigungsminister für das kulinarische Weltkulturerbe“ schaut er der Lebensmittelindustrie auf die Finger und informiert tausende Fans und Follower über neue Gesetze, miese Produktionsbedingungen und Lebensmittelverschwendung in Deutschland und der EU.\n\nMalin Elmlid - Ihr Herzensprojekt Bread Exchange wurde vom Hobby zur Bewegung. Über 1000 selbstgebackene Brote hat Malin mit ihren Lesern bereits getauscht – gegen exotische Zutaten aus aller Welt, Reitausflüge und Hotelübernachtungen, aber niemals gegen Geld. Sogar in Afghanistan bereitete Malin ihren Sauerteig schon zu. 2014 veröffentlichte sie ein Buch darüber, wie ein Backblog die Welt verändern kann.\n\nCarmen Hillebrand – Food Blogger 2.0 sind mit Produktproben, Essenseinladungen und althergebrachtem Social Media-Marketing kaum mehr zu begeistern – im Gegenteil: Im Januar 2015 löste das Facebook-Team von Bertolli mit #Pestogate einen „Dishstorm“ aus, kurze Zeit später war #lidllohntnicht trending topic in Deutschland. Wie geht die Industrie mit den Foodies um? Was hat deren wachsender Einfluss für sie zu bedeuten? Das erklärt Carmen Hillebrand, Abteilungsleiterin Social Media & Content der Metro.\n",
 		"url": "http://re-publica.de/session/blick-ueber-den-tellerrand-food-blogging-20",
 		"begin": "2015-05-06T10:30:00.000Z",
 		"end": "2015-05-06T11:30:00.000Z",
@@ -9581,7 +9655,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430675650.851
 	},
 	{
 		"id": "rp15-session-3856",
@@ -10891,10 +10965,10 @@
 	},
 	{
 		"id": "rp15-session-3937",
-		"title": "Love, Factually",
-		"abstract": "If at times all that hate speech, harassment & surveillance on the Internet seems too much, it’s important to remember that other, oft forgotten emotion: love.\r\n",
-		"description": "This talk is more of a search mission than a compilation of answers. Where is the love, digitally speaking? What can we learn from OKCupid’s matching algorithms? Can emotions and consciousness really be broken down into maths and stats? Including: the three questions you should ask your true love, everything you will ever need to know about online sentiment analysis, what “big data” has to do with small psychology, and much more. \n",
-		"url": "http://re-publica.de/session/love-factually",
+		"title": "Where is the (data)love? ",
+		"abstract": "Enough with the hate speech, let's talk about love! \r\n",
+		"description": "When at time all that hate speech, harassment & surveillance on the internet seems too much, let's try to remember that other, oft forgotten emotion: love. This talk is more of a search mission than a compilation of answers. Where is the love, digitally speaking? What can we learn from OKCupid’s matching algorithms? Can emotions and consciousness really be broken down into maths and stats? In this short and eclectic talk, Anwen will take a bleak look at the soft mushy stuff and look out for datalove in all the wrong places. Including: the three (or thirty) questions to ask your true love, everything you ever need to know about online sentiment analysis, what “big data” has to do with small psychology, what gamers are really passionate about, and much more... \n",
+		"url": "http://re-publica.de/session/where-datalove",
 		"begin": "2015-05-05T16:30:00.000Z",
 		"end": "2015-05-05T17:00:00.000Z",
 		"duration": 1800,
@@ -10945,7 +11019,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430385777.875
+		"last_modified": 1430723050.342
 	},
 	{
 		"id": "rp15-session-3939",
@@ -11078,8 +11152,8 @@
 	{
 		"id": "rp15-session-3941",
 		"title": "The Nuts and Bolts of Nodes and Edges",
-		"abstract": "Now, why should I care about nodes and edges? Because they are the underlying operating system of our coordination and the common factor in new social technologies, ranging from the World Wide Web to Google, Facebook, and most probably the next big thing. I like to show you how graphs surround us everywhere and how computational social science and data visualization can help us to understand complex dynamics in Bitcoin, crowdfunding, economies, movies, startups and soccer teams.",
-		"description": "While the world becomes more complex and hyperlinked, graph theory and network visualization help us to understand the nervous system of the networks we are embedded into. Often, the hidden network is the key to understanding a complex system and its seemingly unconnected elements. Thanks to graph analysis, we can condense complex und unstructured data into beautiful images of nodes (points) and edges (lines). Those images of connections are like a \"window to the soul\" of a network, enabling us to approach following questions:\n\nHow can we make the invisible visible? \n\tHow can we measure connectedness?\n\tWhat are the physics of social networks?\n\tWhat can we learn from analyzing networks?\n \n\nIn this talk, you will be introduced to a few interesting and entertaining examples of applied graph theory and data visualization. You will see what e-mail communication patterns can tell about a startup’s success, how product complexity explains inequality among countries, how patient communities can improve their knowledge about new therapies, how emotions on Twitter reflect Bitcoin trading activities, how soccer teams differentiate in their passing patterns and how crowdfunding networks help to understand the innovative capacity of a city. As an entertaining finish, Moviegalaxies will be presented, a website that visualizes the hidden beauty of social networks within your favorite movies.\n",
+		"abstract": "Just like eyes are a window to our human soul, network visualizations are a window to the soul of an organization.",
+		"description": "Graphs, made up of nodes and edges, are the underlying operating system of our coordination. They are the common thread in new social technologies, ranging from the World Wide Web to Google, Facebook, and most probably the next breakthrough.\n\nModern methods of computational social science, for instance network analysis, can help us to uncover and understand complex dynamics in networks. In this talk, you will see how product complexity explains inequality among countries, how e-mail communication patterns can predict a startup’s success, how emotions on Twitter reflect Bitcoin trading activities, how soccer teams differentiate in their passing patterns and how analyzing crowdfunding data can help to understand the innovative capacity of cities. As an entertaining finish, Moviegalaxies will be presented, a website that visualizes the hidden beauty of social networks within your favorite movies.\n",
 		"url": "http://re-publica.de/session/nuts-and-bolts-nodes-and-edges",
 		"begin": "2015-05-05T14:00:00.000Z",
 		"end": "2015-05-05T14:30:00.000Z",
@@ -11131,7 +11205,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663209.432
+		"last_modified": 1430671330.873
 	},
 	{
 		"id": "rp15-session-3943",
@@ -14710,7 +14784,7 @@
 			},
 			{
 				"id": "rp15-speaker-168",
-				"name": "Sebastian Vollnhals"
+				"name": "♥ Sebastian Vollnhals"
 			},
 			{
 				"id": "rp15-speaker-5552",
@@ -14719,13 +14793,17 @@
 			{
 				"id": "rp15-speaker-502",
 				"name": "Heiko Wichmann"
+			},
+			{
+				"id": "rp15-speaker-2613",
+				"name": "Thomas Kollbach"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430686927.626
 	},
 	{
 		"id": "rp15-session-5839",
@@ -15219,7 +15297,7 @@
 		"id": "rp15-session-5895",
 		"title": "Demystifying the algorithm: who designs your life?",
 		"abstract": "Our digital interactions nowadays are often intermediated by a third party. As more of our world becomes digital these parties are starting to regulate our lives through the use of algorithms that few people understand and that have a mystical quality to them. This talk will use sad, maddening, funny and worrying examples to show that behind the opaque walls of the algorithm you can always find intentional design.",
-		"description": "Amazon sits between you and 'Fifty shades of Grey', Whatsapp sits between you and your group of friends organising a party, Netflix sits between you and 'Game of Thrones' and Facebook sits between you and the next cat meme.\n\nThese services are increasingly governing the way we lead our lives. Our possible futures are narrowed down by their bandwidth. We are supposed to just assume that they help us reach the optimal solution to a problem in some mystical algorithmic way. This often hides the fact that behind every algorithm you can find at least one human being who has made intentional and —more often than not— unintentional decisions about its effects.\n\nThe lack of diversity in the industry is therefore harmful: our world is now being designed and regulated through the imagination of white male twenty-somethings living in the Valley. These algorithms used to mostly affect our world as seen through the browser. But today they are starting to affect our non-screen-lives too, because all the physical things around us are becoming computers. Algorithmic regulation is absolute. It is hard to negotiate with a computer and they don't handle exceptions well.\n\nAre we ready for a world where your car won't start if you haven't paid your car loan, will cancel your lease contract if it thinks you are driving recklessly and will refuse to take a route that isn't suggested by GoogleMaps? Your environment is starting to make assumptions about you to be able to personalise your experience. How will you feel once your hotel room picks out a song to welcome you on the basis of the colour of your skin?\n\nThis talk will use fresh and recognizable examples to show why we need to demand transparency for the algorithms around us if we want to have some agency left in the near future.\n",
+		"description": "Amazon sits between you and 'Fifty shades of Grey', Whatsapp sits between you and your group of friends organising a party, Netflix sits between you and 'House of Cards' and Facebook sits between you and the next cat meme.\n\nThese services are increasingly governing the way we lead our lives. Our possible futures are narrowed down by their bandwidth. We are supposed to just assume that they help us reach the optimal solution to a problem in some mystical algorithmic way. This often hides the fact that behind every algorithm you can find at least one human being who has made intentional and —more often than not— unintentional decisions about its effects.\n\nThe lack of diversity in the industry is therefore harmful: our world is now being designed and regulated through the imagination of white male twenty-somethings living in the Valley. These algorithms used to mostly affect our world as seen through the browser. But today they are starting to affect our non-screen-lives too, because all the physical things around us are becoming computers. Algorithmic regulation is absolute. It is hard to negotiate with a computer and they don't handle exceptions well.\n\nAre we ready for a world where your car won't start if you haven't paid your car loan, will cancel your lease contract if it thinks you are driving recklessly and will refuse to take a route that isn't suggested by GoogleMaps? Your environment is starting to make assumptions about you to be able to personalise your experience. How will you feel once your hotel room picks out a song to welcome you on the basis of the colour of your skin?\n\nThis talk will use fresh and recognizable examples to show why we need to demand transparency for the algorithms around us if we want to have some agency left in the near future.\n",
 		"url": "http://re-publica.de/session/demystifying-algorithm-who-designs-your-life",
 		"begin": "2015-05-07T08:30:00.000Z",
 		"end": "2015-05-07T09:00:00.000Z",
@@ -15271,7 +15349,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1429681904.779
+		"last_modified": 1430679182.689
 	},
 	{
 		"id": "rp15-session-5896",
@@ -17352,15 +17430,10 @@
 		"abstract": "Internationales Stimmengewirr, kritische Fragen und lautes Lachen: Wie klingt die re:publica? BesucherInnen können diese Frage im MIZ_soundexperiment@rp15 kreativ beantworten. Sende Deinen persönlichen rp15-Sound direkt aus dem Programm der Konferenz per WhatsApp an +49 (0) 331 58 56 59 99",
 		"description": "Die JournalistInnen Laura Bender, Franziska Krüger und Andrin Schumann kuratieren die Inhalte. Fragmente werden vom 5. bis 7. Mai 2015 auf 98,8 KISS FM zu hören sein. Alle Soundschnipsel findest Du in Kürze auf der Homepage des MIZ-Babelsberg!\n\nDie Idee ist angelehnt an das KISS FM Soundexperiment \"Klang der Hauptstadt\", das im Sommer 2014 im Rahmen der Innovationsförderung des MIZ-Babelsberg in Kooperation mit der TOP Radiovermarktung und KISS FM entwickelt wurde. Zahlreiche Radio-HörerInnen beteiligten sich an dem erfolgreichen Piloten.\n\nMit dem Projekt CrowdStory gewann das Redaktionsteam im März diesen Jahres den Preis für crossmediale Programminnovationen 2015.\n\nMehr Informationen zum MIZ_innovationspace@rp15 des MIZ-Babelsberg gibt´s hier.\n",
 		"url": "http://re-publica.de/session/mizsoundexperimentrp15",
-		"begin": "2015-05-05T15:45:00.000Z",
-		"end": "2015-05-05T16:45:00.000Z",
-		"duration": 3600,
-		"day": {
-			"id": "rp15-day-1",
-			"label_de": "5. Mai",
-			"label_en": "May 5",
-			"date": "2015-05-05"
-		},
+		"begin": null,
+		"end": null,
+		"duration": 0,
+		"day": false,
 		"location": {
 			"id": "rp15-location-6145",
 			"label_en": "MIZ",
@@ -17410,7 +17483,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430671694.418
 	},
 	{
 		"id": "rp15-session-5971",
@@ -17734,7 +17807,7 @@
 		"id": "rp15-session-5984",
 		"title": "IBM Bluemix – Apps in der Cloud entwickeln: Social Media Hackathon von IBM und re:publica #IBMHack #rp15",
 		"abstract": "Die re:publica ist sicher das Event in Deutschland, das den grössten Buzz in den sozialen Kanälen generiert. Da lohnt es sich, genauer hinzuschauen. Deshalb rufen IBM und die re:publica zum #IBMHack Social Media Hackathon auf. Es geht darum, die pfiffigste Analyse-App zu bauen, die hoffentlich neue und tiefe Insights zum Social Media-Geschehen rund um die re:publica bringt. Als Werkzeugkasten steht dafür IBM Bluemix und darüber die neue gemeinsam von IBM und Twitter geschaffene Twitter API zur Verfügung.",
-		"description": "Mit Bluemix hat IBM eine Umgebung geschaffen, in der sich Cloud-basierte Web-Anwendungen und mobile Backends schnell entwickeln, installieren und aus der Cloud betreiben lassen, und das mit einem einfachen Klick auf eine Schaltfläche.. Das Angebot umfasst Werkzeuge aus unterschiedlichen IT-Disziplinen wie Big Data, Social, Mobile, Sicherheit oder dem Internet der Dinge und orientiert sich an unterschiedliche Kundengruppen und -anforderungen wie Mobile Commerce, Wissenschaft und Marketing. Auch neue Geschäftsfelder wie Wearables, also die Entwicklung tragbarer Computersysteme, können von Bluemix profitieren.\n\nDie PaaS-Umgebung Bluemix (Platform as a Service) bietet mehr als 50 Services von IBM und Geschäftspartnern und gehört zu einer der größten Plattformen innerhalb der Cloud Foundry Foundation. In Bluemix ist beispielweise auch IBM Insights for Twitter als Service verfügbar, über den auf live und archivierte Tweets zugegriffen werden kann. Twitter und IBM haben kürzlich eine Zusammenarbeit angekündigt und betreuen unterdessen schon eine Vielzahl gemeinsamer Kunden, die Twitter für ihr Business analysieren.\n\nWir rufen jetzt zur und mit der re:publica 2015 zum #IBMHack auf, um auf Basis von Bluemix schnell und effizient die pfiffigste und aussagekräftigste App zur Analyse des Social Media Buzz rund um die re:publica zu entwickeln. Sascha Lobo war der Top Influencer der re:publica 2014. Er hat – nach dem offiziellen @republica-Twitteraccount – die meisten Retweets und die höchste Impression-Zahl erreicht. Das wundert nicht wirklich. Doch was kann man noch aus dem Social-Media-Buzz herauslesen, der in jedem Jahr anlässlich der re:publica über uns hereinbricht?\n\nHarald Uebele und Helmut Kühbauch geben am 5. Mai eine Einführung in Bluemix und stehen während der gesamten Zeit am IBM Stand auf der re:publica für Fragen zur Verfügung. Die Sieger werden am letzten Veranstaltungstag um 17:30 Uhr von der re:publica und der IBM präsentiert und prämiert. Wer Fragen zum Hackathon hat, kann sich gerne an Harald Uebele (UEBELE@de.ibm.com,  @Harald_U) wenden. Wer mitmachen will, bitte hier registrieren.\n\nTiPP: Wissensvorsprung sichern für den IBM Social Media Hackathon @republica und nehmen am #IBMBluemix Webinar für Hackathonistas am 30.4.2015 von 16:00 bis 17:00 Uhr  teilnehmen.\nAuch hier anmelden unter: http://ibm.biz/Hack-rp15 .\n\nPräsentiert von IBM.\n",
+		"description": "Mit Bluemix hat IBM eine Umgebung geschaffen, in der sich Cloud-basierte Web-Anwendungen und mobile Backends schnell entwickeln, installieren und aus der Cloud betreiben lassen, und das mit einem einfachen Klick auf eine Schaltfläche.. Das Angebot umfasst Werkzeuge aus unterschiedlichen IT-Disziplinen wie Big Data, Social, Mobile, Sicherheit oder dem Internet der Dinge und orientiert sich an unterschiedliche Kundengruppen und -anforderungen wie Mobile Commerce, Wissenschaft und Marketing. Auch neue Geschäftsfelder wie Wearables, also die Entwicklung tragbarer Computersysteme, können von Bluemix profitieren.\n\nDie PaaS-Umgebung Bluemix (Platform as a Service) bietet mehr als 50 Services von IBM und Geschäftspartnern und gehört zu einer der größten Plattformen innerhalb der Cloud Foundry Foundation. In Bluemix ist beispielweise auch IBM Insights for Twitter als Service verfügbar, über den auf live und archivierte Tweets zugegriffen werden kann. Twitter und IBM haben kürzlich eine Zusammenarbeit angekündigt und betreuen unterdessen schon eine Vielzahl gemeinsamer Kunden, die Twitter für ihr Business analysieren.\n\nWir rufen jetzt zur und mit der re:publica 2015 zum #IBMHack auf, um auf Basis von Bluemix schnell und effizient die pfiffigste und aussagekräftigste App zur Analyse des Social Media Buzz rund um die re:publica zu entwickeln. Sascha Lobo war der Top Influencer der re:publica 2014. Er hat – nach dem offiziellen @republica-Twitteraccount – die meisten Retweets und die höchste Impression-Zahl erreicht. Das wundert nicht wirklich. Doch was kann man noch aus dem Social-Media-Buzz herauslesen, der in jedem Jahr anlässlich der re:publica über uns hereinbricht?\n\nHarald Uebele und Helmut Kühbauch geben am 5. Mai eine Einführung in Bluemix und stehen während der gesamten Zeit am IBM Stand auf der re:publica für Fragen zur Verfügung. Die Sieger werden am letzten Veranstaltungstag um 17:30 Uhr von der re:publica und der IBM präsentiert und prämiert. Wer Fragen zum Hackathon hat, kann sich gerne an Harald Uebele (UEBELE@de.ibm.com,  @Harald_U) wenden. Wer mitmachen will, bitte hier registrieren.\n\nUnd hier die Preise des IBM Hackathons zur re:publica 2015:\n\n1. Preis: ein Macbook\n\n2. Preis: ein iPad\n\n3. Preis: ein HTC One M8 Smartphone\n\nViel Erfolg beim Hacken!\n\n \n\nPräsentiert von IBM.\n",
 		"url": "http://re-publica.de/session/ibm-bluemix-apps-cloud-entwickeln-social-media-hackathon-ibm-und-republica-ibmhack-rp15",
 		"begin": "2015-05-05T10:15:00.000Z",
 		"end": "2015-05-05T11:15:00.000Z",
@@ -17790,7 +17863,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430668030.771
 	},
 	{
 		"id": "rp15-session-5987",
@@ -17844,12 +17917,16 @@
 				"name": "Bettina Fächer"
 			},
 			{
-				"id": "rp15-speaker-5072",
-				"name": "Marcus Haberkorn"
-			},
-			{
 				"id": "rp15-speaker-5074",
 				"name": "Stephan Wirth"
+			},
+			{
+				"id": "rp15-speaker-5568",
+				"name": "Wolfgang Reichardt"
+			},
+			{
+				"id": "rp15-speaker-5072",
+				"name": "Marcus Haberkorn"
 			},
 			{
 				"id": "rp15-speaker-5394",
@@ -17860,7 +17937,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430670488.057
 	},
 	{
 		"id": "rp15-session-5989",
@@ -20612,7 +20689,7 @@
 		"id": "rp15-session-6082",
 		"title": "BMC Backstage ",
 		"abstract": "Music meets Digital Culture",
-		"description": "Music meets Digital Culture. Pre-event for re:publica's musicday. \n",
+		"description": "BMC Backstage ist ein Opener für den re:cord Muiscday, der am 7. Mai statt findet. Die Idee dahinter ist einfach und gut. Viele Unternehmen im Kreativbereich agieren nach wie vor vornehmlich branchenintern und greifen auch für neue Ansätze primär auf etablierte Kontakte und Verbindungen zurück. BMC Backstage „Music meets …“ ist der Versuch, diese Branchen miteinander zu vernetzen und nutzbar zu machen. Jeder Event hat ein Branchensegment im Fokus, entsprechend wechselt auch der Veranstaltungsort. Strukturiertes Networking bietet die Gelegenheit neue Kontakte zu knüpfen und weil die besten Ideen am Tresen entstehen, sorgt die BMC für ausreichend Getränke, Kulinarisches und Live-Musik im Anschluss.\nJAZZ BAR19:00 Berlin Music Commission Backstage – Music meets Digital Culture – Live music by Sebastian Studnitzky (Trumpet) & Paul Kleber (Upright bass)\nSTORE20:00 - 21:30 Berlin Music Commission Backstage – Daniel W. Best of the XJAZZ DJ Team21:30 Live: Tangowerk feat. The Oracle \n \n",
 		"url": "http://re-publica.de/session/bmc-backstage",
 		"begin": "2015-05-06T17:00:00.000Z",
 		"end": "2015-05-06T20:00:00.000Z",
@@ -20664,7 +20741,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663209.432
+		"last_modified": 1430677091.089
 	},
 	{
 		"id": "rp15-session-6083",
@@ -20964,10 +21041,10 @@
 	},
 	{
 		"id": "rp15-session-6094",
-		"title": "DJ Ninjagonzo",
+		"title": "DJ Ninjagonzo – DJ set @ re:fill bar",
 		"abstract": "DJ Ninjagonzo aka DJ La Niña aka @_Jenny_Lou eröffnet die Abschlussparty mit einem Kessel Bass und Pop.",
 		"description": "…\n",
-		"url": "http://re-publica.de/session/dj-ninjagonzo",
+		"url": "http://re-publica.de/session/dj-ninjagonzo-dj-set-refill-bar",
 		"begin": "2015-05-07T18:00:00.000Z",
 		"end": "2015-05-07T20:00:00.000Z",
 		"duration": 7200,
@@ -21018,7 +21095,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430385777.875
+		"last_modified": 1430670610.264
 	},
 	{
 		"id": "rp15-session-6096",
@@ -22552,10 +22629,10 @@
 	},
 	{
 		"id": "rp15-session-6131",
-		"title": "Lunch Beat",
+		"title": "Lunch Beat @ re:fill bar",
 		"abstract": "1st rule: If it’s your first lunch at Lunch Beat, you have to dance. – So langsam aber sicher breitet sich das Lunch-Beat-Fieber aus Schweden in der ganzen Welt aus. Molly Ränge erfand diese “Tanzmittagspause”. Das spannende Konzept: Statt die Mittagspause im Lokal zu verbringen, trifft man sich eine Stunde in einem Club, bekommt etwas Wasser in die Hand – und tanzt.",
 		"description": "Nach dem Sitzen und Lauschen darf sich einfach mal ausgepowert werden. Beim Lunch Beat tanzen wir eine Stunde in der Mittagspause.  Es gibt Wasser for free und House Musik auf die Ohren von Daniel Berhane.\n",
-		"url": "http://re-publica.de/session/lunch-beat-0",
+		"url": "http://re-publica.de/session/lunch-beat-refill-bar",
 		"begin": "2015-05-06T10:30:00.000Z",
 		"end": "2015-05-06T11:30:00.000Z",
 		"duration": 3600,
@@ -22600,13 +22677,17 @@
 			{
 				"id": "rp15-speaker-670",
 				"name": "Dan Weigl"
+			},
+			{
+				"id": "rp15-speaker-5234",
+				"name": "Hauke Hatzelhoffer"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430673850.847
 	},
 	{
 		"id": "rp15-session-6132",
@@ -23534,13 +23615,21 @@
 			{
 				"id": "rp15-speaker-5163",
 				"name": "Marie  Meimberg"
+			},
+			{
+				"id": "rp15-speaker-5609",
+				"name": "Elisa Kropp"
+			},
+			{
+				"id": "rp15-speaker-5607",
+				"name": "Robin Blase"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1429681904.779
+		"last_modified": 1430685848.399
 	},
 	{
 		"id": "rp15-session-6155",
@@ -23876,7 +23965,7 @@
 		"id": "rp15-session-6169",
 		"title": "And the winner is ... Social Media Hackathon von IBM und re:publica #IBMHack #rp15",
 		"abstract": "Die re:publica ist sicher das Event in Deutschland, das den grössten Buzz in den sozialen Kanälen generiert. Deshalb haben IBM und re:publica zum #IBMHack Social Media Hackathon auf. Es ging darum, die pfiffigste Analyse-App zu bauen, die hoffentlich neue und tiefe Insights zum Social Media-Geschehen rund um die re:publica bringt. Am 7. Mai, dem letzten Tag der re:publica, prämieren wir die besten Apps, die entwickelt wurden.",
-		"description": "Mit Bluemix hat IBM eine Umgebung geschaffen, in der sich Cloud-basierte Web-Anwendungen und mobile Backends schnell entwickeln, installieren und aus der Cloud betreiben lassen, und das mit einem einfachen Klick auf eine Schaltfläche.. Das Angebot umfasst Werkzeuge aus unterschiedlichen IT-Disziplinen wie Big Data, Social, Mobile, Sicherheit oder dem Internet der Dinge und orientiert sich an unterschiedliche Kundengruppen und -anforderungen wie Mobile Commerce, Wissenschaft und Marketing. Auch neue Geschäftsfelder wie Wearables, also die Entwicklung tragbarer Computersysteme, können von Bluemix profitieren.\n\nMit und zur re:publica 2015 haben wir zum #IBMHack aufgerufen, um auf Basis von Bluemix schnell und effizient die pfiffigste und aussagekräftigste App zur Analyse des Social Media Buzz rund um die re:publica zu entwickeln.\n\n \n\nPräsentiert von IBM.\n",
+		"description": "Mit Bluemix hat IBM eine Umgebung geschaffen, in der sich Cloud-basierte Web-Anwendungen und mobile Backends schnell entwickeln, installieren und aus der Cloud betreiben lassen, und das mit einem einfachen Klick auf eine Schaltfläche.. Das Angebot umfasst Werkzeuge aus unterschiedlichen IT-Disziplinen wie Big Data, Social, Mobile, Sicherheit oder dem Internet der Dinge und orientiert sich an unterschiedliche Kundengruppen und -anforderungen wie Mobile Commerce, Wissenschaft und Marketing. Auch neue Geschäftsfelder wie Wearables, also die Entwicklung tragbarer Computersysteme, können von Bluemix profitieren.\n\nMit und zur re:publica 2015 haben wir zum #IBMHack aufgerufen, um auf Basis von Bluemix schnell und effizient die pfiffigste und aussagekräftigste App zur Analyse des Social Media Buzz rund um die re:publica zu entwickeln.\n\nUnd hier die Preise des IBM Hackathons zur re:publica 2015:\n\n1. Preis: ein Macbook\n\n2. Preis: ein iPad\n\n3. Preis: ein HTC One M8 Smartphone\n\nViel Erfolg beim Hacken!\n\n \n\nPräsentiert von IBM.\n",
 		"url": "http://re-publica.de/session/and-winner-social-media-hackathon-ibm-und-republica-ibmhack-rp15",
 		"begin": "2015-05-07T15:30:00.000Z",
 		"end": "2015-05-07T16:00:00.000Z",
@@ -23932,7 +24021,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430668030.771
 	},
 	{
 		"id": "rp15-session-6172",
@@ -24663,7 +24752,7 @@
 	{
 		"id": "rp15-session-6193",
 		"title": "Lightning Talks",
-		"abstract": "tba",
+		"abstract": "Short Talks about work life, community wireless network and startups",
 		"description": "Jürgen Neumann: school of collaboration: Ein Living Lab für echte Zusammenarbeit\nDie Arbeit im Team kann sehr motivierend oder hoch frustrierend sein. Was macht den Unterschied aus? Wie können wir 100 Jahre alte Organisationsformen der Arbeit neu denken? Was braucht es um Effizienz, Innovation, Wissenszuwachs, Menschlichkeit und Spaß bei der Arbeit zu vereinen? Wir sind ein Living Lab welches sich mit diesen Fragen beschäftigt. Als Experten forschen wir gemeinsam, um zu lernen wie echte Kollaboration funktioniert. Dazu entwickeln wir Methoden, Werkzeuge und Umgebungen, die Kollaboration unterstützen – und wenden sie selbst unter wissenschaftlicher Beobachtung an. Unsere guten sowie schlechten Erfahrungen mit Zusammenarbeit sind für jeden einzelnen von uns die Motivation zur Veränderung.\nElektra Wagenrad: Freifunk im TV-Whitespace\nWir brauchen mehr Frequenzspektrum mit größerer Reichweite für die digitalen Commons – eine Chance dazu bietet die digitale Dividende. Das Pilotprojekt der Berliner Freifunker mit der Medienanstalt Berlin-Brandenburg könnte ein erster Schritt zur WLAN-Nutzung im UHF-Band sein.\nJens Schindler: Blog and get paid\nPayPeanuts is a monetisation service that helps bloggers make a living. We are looking for bloggers, who will enjoy working with us on our beta test version. The presentation will show how the service works.\nSaskia Reppin: START-UP CHILE: Changing a country's future through startups\nFour years ago, Start-Up Chile was born. It’s mission -- to literally transform the Chilean entrepreneurial ecosystem. It began with a question. What would happen if we could bring the best and brightest entrepreneurs from all around the globe and insert them into the local ecosystem? We would give them capital to build their companies and a visa to stay. Would they come? Would this have any impact?\n",
 		"url": "http://re-publica.de/session/lightning-talks-0",
 		"begin": "2015-05-07T13:00:00.000Z",
@@ -24728,7 +24817,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430682790.902
 	},
 	{
 		"id": "rp15-session-6194",
@@ -25455,6 +25544,64 @@
 		"last_modified": 1430664096.385
 	},
 	{
+		"id": "rp15-session-6209",
+		"title": "Prototype Origami",
+		"abstract": "“Prototype Origami” is a workshop four young and old in which you learn how to bring your idea to life by creating amazing paper prototypes.",
+		"description": "“Prototype Origami” is a workshop four young and old in which you learn how to bring an abstract idea to life by creating amazing paper prototypes.\n\nJust bring your idea and we will show you how to get the essence out of it, how to communicate it in an easy way, create an example that hellps you and others understand it better and show you how you create amazing prototypes out of it - using not much more than paper. The result can be a prototype for an idea on how to fix your Kiez or Kita, an app, a website or anything else you want to create.\n\nSo get your ideas out of the drawer and bring them to life! \n",
+		"url": "http://re-publica.de/session/prototype-origami",
+		"begin": "2015-05-07T10:30:00.000Z",
+		"end": "2015-05-07T12:15:00.000Z",
+		"duration": 6300,
+		"day": {
+			"id": "rp15-day-3",
+			"label_de": "7. Mai",
+			"label_en": "May 7",
+			"date": "2015-05-07"
+		},
+		"location": {
+			"id": "rp15-location-6144",
+			"label_en": "Makerspace",
+			"label_de": "Makerspace"
+		},
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation",
+			"color": [
+				196,
+				55,
+				8,
+				1
+			]
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de+en",
+			"label_de": "Deutsch/Englisch",
+			"label_en": "German/English"
+		},
+		"speakers": [
+			{
+				"id": "rp15-speaker-2189",
+				"name": "Katina Sostmann"
+			}
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp15",
+		"type": "session",
+		"last_modified": 1430673131.667
+	},
+	{
 		"id": "rp15-session-6210",
 		"title": "Jewellery Making with a Feminist Flavour",
 		"abstract": "Jewellery making with a feminist flavour: we'll be making electronic broches while discussing life, technology, feminism and fashion.",
@@ -25759,7 +25906,7 @@
 	{
 		"id": "rp15-session-6219",
 		"title": "US attacks on data privacy through trade agreements",
-		"abstract": "Even after Edward Snowden's revelations, the US government is attempting to lock in the NSA's ability to spy on citizens' data from up to 159 other countries through current negotiations for legally enforceable trade agreements: TTIP, TiSA, CETA, TPP, ...",
+		"abstract": "Even after Edward Snowden's revelations, the US government is attempting to lock in the NSA's ability to spy on citizens' data from up to 159 other countries through current negotiations for legally enforceable trade agreements: TTIP, TiSA, TPP, ...",
 		"description": "This session explains how the USA is doing it and which countries are targeted.\n",
 		"url": "http://re-publica.de/session/us-attacks-data-privacy-through-trade-agreements",
 		"begin": "2015-05-07T09:45:00.000Z",
@@ -25812,7 +25959,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430385777.875
+		"last_modified": 1430688842.917
 	},
 	{
 		"id": "rp15-session-6220",
@@ -25882,10 +26029,10 @@
 	},
 	{
 		"id": "rp15-session-6224",
-		"title": "Echochamber DJ-Set",
+		"title": "Echochamber – DJ set @ store",
 		"abstract": "Es gibt Bass und mich live zu sehen.\r\nReden können wa gern hinterher.",
 		"description": "Ich bring meinen Podcast zur re:publica.\n\nAls DJ-Set.\n\nnothing more, nothing less\n",
-		"url": "http://re-publica.de/session/echochamber-dj-set",
+		"url": "http://re-publica.de/session/echochamber-dj-set-store",
 		"begin": "2015-05-07T18:00:00.000Z",
 		"end": "2015-05-07T20:00:00.000Z",
 		"duration": 7200,
@@ -25936,7 +26083,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430670610.264
 	},
 	{
 		"id": "rp15-session-6225",
@@ -26728,13 +26875,21 @@
 			{
 				"id": "rp15-speaker-5502",
 				"name": "Katharina Mühlbeyer"
+			},
+			{
+				"id": "rp15-speaker-5603",
+				"name": "Mohamad Al Ashrafani"
+			},
+			{
+				"id": "rp15-speaker-5615",
+				"name": "Vasillis Tsianos"
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430663830.445
+		"last_modified": 1430723050.342
 	},
 	{
 		"id": "rp15-session-6247",
@@ -28136,10 +28291,10 @@
 	},
 	{
 		"id": "rp15-session-6291",
-		"title": "beats mit unterstrich",
+		"title": "beats mit unterstrich – DJ set @ store",
 		"abstract": "Musik zum Tanzen – mit Groove, Bass und Seele",
 		"description": "soundcloud.com/tasmo\n",
-		"url": "http://re-publica.de/session/beats-unterstrich",
+		"url": "http://re-publica.de/session/beats-unterstrich-dj-set-store",
 		"begin": "2015-05-07T22:00:00.000Z",
 		"end": "2015-05-08T00:00:00.000Z",
 		"duration": 7200,
@@ -28185,7 +28340,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430670970.846
 	},
 	{
 		"id": "rp15-session-6293",
@@ -28871,10 +29026,10 @@
 	},
 	{
 		"id": "rp15-session-6319",
-		"title": "Music was my first l.o.v.e. (DJ Set)",
+		"title": "Music was my first l.o.v.e. – DJ Set @ re:fill bar",
 		"abstract": "DJ Set: BarbNerdy --> earcandy shizzle (chilled swag & beats)",
 		"description": "Sharing Means Caring\n\nhttps://soundcloud.com/barbnerdy/sets/mixtape-sharing-means-caring-1\n",
-		"url": "http://re-publica.de/session/music-was-my-first-love-dj-set",
+		"url": "http://re-publica.de/session/music-was-my-first-love-dj-set-refill-bar",
 		"begin": "2015-05-05T18:00:00.000Z",
 		"end": "2015-05-05T20:00:00.000Z",
 		"duration": 7200,
@@ -28925,7 +29080,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430670253.915
 	},
 	{
 		"id": "rp15-session-6320",
@@ -28992,7 +29147,7 @@
 	{
 		"id": "rp15-session-6325",
 		"title": "A Deeper Frontier of Freedom — The State of the Deepweb",
-		"abstract": "Discussing Politics, Security and Network Utopias with Addie Wagenknecht (Deep Lab), Jacob Applebaum (Tor Project) and Andy Neumann (Bund deutscher Kriminalbeamter).",
+		"abstract": "Discussing Politics, Security and Network Utopias with Addie Wagenknecht (Deep Lab), Jacob Applebaum (Tor Project) and Heiko Rittelmeier (LKA Bayern, Bund deutscher Kriminalbeamter).",
 		"description": "More details to follow soon.\n",
 		"url": "http://re-publica.de/session/deeper-frontier-freedom-state-deepweb",
 		"begin": "2015-05-07T13:00:00.000Z",
@@ -29053,7 +29208,7 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430725211.258
 	},
 	{
 		"id": "rp15-session-6331",
@@ -29251,7 +29406,11 @@
 		"end": null,
 		"duration": 0,
 		"day": false,
-		"location": null,
+		"location": {
+			"id": "rp15-location-6148",
+			"label_en": "re:publica",
+			"label_de": "re:publica"
+		},
 		"track": {
 			"id": "re-publica",
 			"label_de": "re:publica",
@@ -29358,25 +29517,41 @@
 			{
 				"id": "rp15-speaker-5495",
 				"name": "Helge Denker"
+			},
+			{
+				"id": "rp15-speaker-5492",
+				"name": "Melanie Stilz"
+			},
+			{
+				"id": "rp15-speaker-5608",
+				"name": "Katharina Seifert"
+			},
+			{
+				"id": "rp15-speaker-5610",
+				"name": "Nora Wohlfeil "
 			}
 		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664190.759
+		"last_modified": 1430686927.626
 	},
 	{
 		"id": "rp15-session-6364",
 		"title": "Finding Europe – as a Refugee",
 		"abstract": "Kopf voller Infos, eigentlich Lust nach draussen zu gehen, aber keine Lust etwas zu verpassen?! Unsere Outdoor-Challenge hilft, diese Diskrepanz zu überwinden.",
-		"description": "Das rasante Team-game verbindet Bewegung mit dem Konferenzthema und gibt den Spielern die Chance, ihr Wissen über politische Flucht nach Europa zu erweitern - ihr habt 45 Minuten Zeit, um möglichst viele Aufgaben zu lösen - im Wettlauf gegen andere Teams und die Zeit.\n\nStart jeden Tag um 13 Uhr und um 16 Uhr.\nTreffpunkt immer am Infopoint\n\nAnmeldung bis 30 Minuten vor Start unter medialepfade.de/rp15\n",
+		"description": "Das rasante Team-game verbindet Bewegung mit dem Konferenzthema und gibt den Spielern die Chance, ihr Wissen über politische Flucht nach Europa zu erweitern - ihr habt 45 Minuten Zeit, um möglichst viele Aufgaben zu lösen - im Wettlauf gegen andere Teams und die Zeit.\n\nStart jeden Tag um 13 Uhr und um 16 Uhr. Treffpunkt immer am Infopoint\n\nAnmeldung bis 30 Minuten vor Start unter medialepfade.de/rp15\n",
 		"url": "http://re-publica.de/session/finding-europe-refugee",
 		"begin": null,
 		"end": null,
 		"duration": 0,
 		"day": false,
-		"location": null,
+		"location": {
+			"id": "rp15-location-6148",
+			"label_en": "re:publica",
+			"label_de": "re:publica"
+		},
 		"track": {
 			"id": "politics-society",
 			"label_de": "Politik & Gesellschaft",
@@ -29425,6 +29600,6 @@
 		"links": [],
 		"event": "rp15",
 		"type": "session",
-		"last_modified": 1430664096.385
+		"last_modified": 1430671694.418
 	}
 ]

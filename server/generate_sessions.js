@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var request = require('request');
 var c = require('../config.js');
 var Splitflap = require('../lib/splitflap.js');
 
@@ -219,6 +220,8 @@ function sessionTime(session) {
 
 function loadData() {
 	var sessions = JSON.parse(fs.readFileSync('./data/sessions.json', 'utf8'));
+
+	request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
 
 	sessions = sessions.filter(function (session) {
 		if (!session.begin) return false;
