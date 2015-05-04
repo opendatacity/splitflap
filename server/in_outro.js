@@ -14,7 +14,7 @@ var flaps = [
 	{key:'text',  font:'400', x:48, dy:33, length:29, gap:3}
 ]
 
-var pause = 10;
+var pause = 15;
 var empty = {title:'', text:''};
 
 var todos = [
