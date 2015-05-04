@@ -151,11 +151,11 @@ async.eachSeries(
 				var stack = [];
 				var w = font.flapWidth;
 				var h = font.flapHeight;
-				var c = Math.cos(f*Math.PI);
+				var cos = Math.cos(f*Math.PI);
 				var d = Math.sin(f*Math.PI);
-				var scale = Math.abs(c)+1e-100;
+				var scale = Math.abs(cos)+1e-100;
 				var yt = (y-h/2)/scale + h/2;
-				var yb = (1-c)*0.5*h;
+				var yb = (1-cos)*0.5*h;
 
 				var shadow = 2*(yb-y)/h/(d+1e-5) + 0.5;
 
@@ -166,7 +166,7 @@ async.eachSeries(
 					addColor([0,0,0,100*(1-a)]);
 
 					if ((f < 0.5) && (yt >= 0)) {
-						var b = (c-1)*0.3;
+						var b = (cos-1)*0.3;
 						addTexture(0, x, yt, b);
 					}
 				} else {
@@ -176,7 +176,7 @@ async.eachSeries(
 					addColor([0,0,0,100*(1-a)]);
 
 					if ((f > 0.5) && (yt < font.flapHeight)) {
-						var b = (c+1)*0.1;
+						var b = (cos+1)*0.1;
 						addTexture(1, x, yt, b);
 					}
 				}
@@ -187,8 +187,8 @@ async.eachSeries(
 				}
 
 				function addTexture(i,x,y,brightness) {
-					if (Math.abs(y-h/2) < c.flapGap1) return false
-					if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return false
+					if (Math.abs(y-h/2) < c.flapGap1) return false;
+					if ((Math.abs(y-h/2) < c.flapGap2) && (Math.abs(x-w/2) > w/2-2*c.flapGap1)) return false;
 					stack.push({type:'texture', textureId:i, x:x, y:y, brightness:brightness})
 				}
 			}
