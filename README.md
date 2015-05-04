@@ -1,5 +1,7 @@
 # split flap display for re:publica 2015
 
+![Photo](https://raw.githubusercontent.com/opendatacity/splitflap/master/photo.jpg)
+
 Ok, ich bin ja nicht so'n Fan von Doku-Schreiben. Notfalls einfach per Twitter fragen: [@MichaelKreil](https://twitter.com/MichaelKreil).
 
 Prinzipiell funktioniert es so:
@@ -32,9 +34,6 @@ Für die Echtzeit-Session-Ankündigungen gibt's ein noch mehr magic. Oder besser
 Dort wird im 15-Minuten-Takt die [`sessions.json`](http://data.re-publica.de/data/rp15/sessions.json) runtergeladen, die im Rahmen unseres [re:data-Projektes](http://data.re-publica.de) erzeugt wird.
 
 Neue oder geänderte Sessions werden dann als Video-Ankündigung gerendert. Die aktuell darzustellenden Videos werden als Feeds (`feeds/monitor1-3.rss`) angeboten, die die Player hinter den Screens abonniert haben.
-
-Et Voilà!
-
 
 
 
