@@ -8,26 +8,29 @@ var feedFolder = './web/feeds/';
 var videoFeedTemplate = fs.readFileSync('./data/feed_video.template', 'utf8');
 
 var monitore = [
-	{ name:'monitor1', stages:['STG-1','STG-4','STG-7','STG-10']},
-	{ name:'monitor2', stages:['STG-2','STG-5','STG-8','STG-11']},
-	{ name:'monitor3', stages:['STG-3','STG-6','STG-9','STG-T' ]}
+	{ name:'monitor1', id:1 },
+	{ name:'monitor2', id:2 },
+	{ name:'monitor3', id:3 }
 ]
 
-var filename = process.argv[2]+'.mp4';
-var localFilename = videoFolder + filename;
-
-if (!fs.existsSync(localFilename)) {
-	console.error('File does not exists: "'+localFilename+'"');
-	process.exit();
-}
-
-var filesize = fs.statSync(localFilename).size;
-
-console.log('Switching to "'+filename+'" ('+filesize+')');
+var filenameG = process.argv[2]+'.mp4';
 
 
 
 monitore.forEach(function (monitor) {
+	var filename = filenameG.replace(/%/g, monitor.id);
+	var localFilename = videoFolder + filename;
+
+	if (!fs.existsSync(localFilename)) {
+		console.error('File does not exists: "'+localFilename+'"');
+		process.exit();
+	}
+
+	var filesize = fs.statSync(localFilename).size;
+
+	console.log('Switching to "'+filename+'" ('+filesize+')');
+
+
 	monitor = monitor.name;
 
 	var feed = videoFeedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
