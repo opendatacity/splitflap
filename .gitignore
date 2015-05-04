@@ -1,8 +1,7 @@
+
 node_modules/
-
-*.mp4
-
-*.log
 server/data/knownHashs.json
-
+*.mp4
+*.log
 *.rss
+
