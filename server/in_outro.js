@@ -24,7 +24,7 @@ var todos = [
 		screenplay: [
 			empty,0,
 			{ title:'Hello Earthling!', text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!' }, pause,
-			{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
+			//{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
 			empty
 		]
 	},
@@ -33,8 +33,9 @@ var todos = [
 		filename:'intro2.mp4',
 		screenplay: [
 			empty,0,
-			{ title:'Salve terrestre!', text: 'Benvenuto a re:publica 2015! Mentre aspettiamo per il decollo, fai attenzione a eventuali forme di vita inattese e abbracciatele subito!' }, pause,
-			{ title:'¡Hola, terrícola!', text: 'Bienvenido a re:publica 2015. Mientras esperamos el despegue, ¡preste atención a formas de vida desatendidas y dales un abrazo!' }, pause,
+			{ title:'Hello Earthling!', text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!' }, pause,
+			//{ title:'Salve terrestre!', text: 'Benvenuto a re:publica 2015! Mentre aspettiamo per il decollo, fai attenzione a eventuali forme di vita inattese e abbracciatele subito!' }, pause,
+			//{ title:'¡Hola, terrícola!', text: 'Bienvenido a re:publica 2015. Mientras esperamos el despegue, ¡preste atención a formas de vida desatendidas y dales un abrazo!' }, pause,
 			empty
 		]
 	},
@@ -43,11 +44,12 @@ var todos = [
 		filename:'intro3.mp4',
 		screenplay: [
 			empty,0,
-			{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
-			{ title:'Salut terrien!', text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.' }, pause,
+			{ title:'Hello Earthling!', text: 'Welcome to re:publica 2015. While we wait for take off, watch out for unattended life forms and hug them immediately!' }, pause,
+			//{ title:'Hallo Erdling!', text: 'Willkommen auf der re:publica 2015. Während wir auf den Abflug warten, halt die Augen offen nach unbeaufsichtigten Lebensformen – und umarm sie ganz schnell!' }, pause,
+			//{ title:'Salut terrien!', text: 'Bienvenue à re:publica 2015! Pendant que nous attendons le lancement, faites attention aux formes de vie sans surveillance et embarrassez-les tout de suite.' }, pause,
 			empty
 		]
-	},
+	},/*
 	{
 		title:'intro',
 		filename:'intro.mp4',
@@ -103,7 +105,7 @@ var todos = [
 			{ title:'OMG c\'est fini…', text: 'nous espérons que vous avez eu une re:publica formidable! Alors, passez la nuit à danser! On se revoit à #16! And don\'t forget to call your MAMAAA!' }, pause,
 			empty
 		]
-	}
+	}*/
 ]
 
 Splitflap(flaps, function (splitflap) {
