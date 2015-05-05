@@ -4,3 +4,5 @@ server/data/knownHashs.json
 *.mp4
 *.log
 *.rss
+
+server/data/sessions.json
