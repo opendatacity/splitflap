@@ -11,8 +11,8 @@ var config = {
 	fps: 60,
 	backColor: [0,46,60],
 	sessions: {
-		future:        1.5*24*60*60,
-		loopTimeStep:         15*60,
+		future:        1.0*24*60*60,
+		loopTimeStep:          5*60,
 		updateDataEvery:      15*60,
 		updateFeedEvery:       1*60
 	},

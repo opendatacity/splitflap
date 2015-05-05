@@ -164,7 +164,7 @@ Splitflap(flaps, function (splitflap) {
 
 					sessions.forEach(function (session) {
 						if (session.location != stage) return;
-						if ((session.beginT <= time) && (time <= session.endT)) s0 = session;
+						if ((session.beginT <= time) && (time < session.endT)) s0 = session;
 						if (session.beginT > time) {
 							if (!s1) {
 								s1 = session;
