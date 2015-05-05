@@ -4,6 +4,8 @@
 
 Ok, ich bin ja nicht so'n Fan von Doku-Schreiben. Notfalls einfach per Twitter fragen: [@MichaelKreil](https://twitter.com/MichaelKreil).
 
+Das meine ich ernst! Wenn was unklar ist, bitte nachfragen, dann erkläre ich das in der Doku genauer!
+
 Prinzipiell funktioniert es so:
 
 ## Preparation
@@ -20,7 +22,7 @@ Mit [`textures/2_raytrace.js`](https://github.com/MichaelKreil/splitflap/blob/ma
 
 Für die Generierung der Videos werden die Texte als Objects der [`lib/splitflap.js`](https://github.com/MichaelKreil/splitflap/blob/master/lib/splitflap.js)-Library übergeben.
 Hier werden dann die Texturen in einem Binary Buffer zusammenkopiert.
-Der Buffer wird dann nach ffmpeg gepiped, was in der [`lib/ffmpeg.js`](https://github.com/MichaelKreil/splitflap/blob/master/lib/ffmpeg.js)-Library passiert.
+Die Buffer werden dann als raw frames (rgb24) nach ffmpeg gepiped, was in der [`lib/ffmpeg.js`](https://github.com/MichaelKreil/splitflap/blob/master/lib/ffmpeg.js)-Library passiert.
 
 Die Scripte
 [`server/in_outro.js`](https://github.com/MichaelKreil/splitflap/blob/master/server/in_outro.js)
@@ -34,6 +36,14 @@ Für die Echtzeit-Session-Ankündigungen gibt's ein noch mehr magic. Oder besser
 Dort wird im 15-Minuten-Takt die [`sessions.json`](http://data.re-publica.de/data/rp15/sessions.json) runtergeladen, die im Rahmen unseres [re:data-Projektes](http://data.re-publica.de) erzeugt wird.
 
 Neue oder geänderte Sessions werden dann als Video-Ankündigung gerendert. Die aktuell darzustellenden Videos werden als Feeds (`feeds/monitor1-3.rss`) angeboten, die die Player hinter den Screens abonniert haben.
+
+## FAQ
+
+### "Warum ist denn Zeichen xyz nicht dabei?" bzw. "Warum wird kein Russisch/Griechisch/Chinesisch... unterstützt?"
+
+Ich hätte am Liebsten alle Zeichen drin. Z.B. 65'536 UTF-8-Characters. Die bräuchten dann aber 91 Minuten, um einmal durchzuflappen! Also haben wir uns auf den notwendigsten Zeichensatz beschränkt. Alle Character, die nicht darin auftauchen werden teilweise manuell zugeordnet. Also eine "[" wird dann zu einer "(". Die Regular Expressions findet man ganz unten in [`lib/splitflap.js`](https://github.com/MichaelKreil/splitflap/blob/master/lib/splitflap.js)
+
+
 
 
 
