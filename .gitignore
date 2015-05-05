@@ -6,3 +6,5 @@ server/data/sessions.json
 *.log
 *.rss
 
+
+server/data/sessions.json
