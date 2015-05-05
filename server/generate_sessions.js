@@ -1,4 +1,5 @@
 var fs = require('fs');
+var util = require('util');
 var path = require('path');
 var request = require('request');
 var c = require('../config.js');
@@ -64,10 +65,12 @@ Splitflap(flaps, function (splitflap) {
 		console.log('checkFeed');
 
 		var time = (new Date()).getTime();
+		var entryError = false;
 
 		monitore.forEach(function (monitor) {
 			monitor = monitor.name;
 			var nextEntry = false;
+
 			Object.keys(queue).forEach(function (key) {
 				var entry = queue[key];
 				if (entry.monitor != monitor) return;
@@ -76,7 +79,11 @@ Splitflap(flaps, function (splitflap) {
 				if (nextEntry.startTime < entry.startTime) nextEntry = entry;
 			})
 
-			if (!nextEntry) return console.error('Entry not found');
+			if (!nextEntry) {
+				console.error('Entry not found!');
+				entryError = true;
+				return;
+			}
 
 			var feed = videoFeedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
 				key = key.substr(2, key.length-4);
@@ -94,6 +101,11 @@ Splitflap(flaps, function (splitflap) {
 			console.log('Write "'+filename+'"');
 			fs.writeFileSync(filename, feed, 'utf8');
 		})
+
+		if (entryError) {
+			console.error('queue is:');
+			console.error(util.inspect(queue));
+		}
 	}
 
 	function checkTodo() {
@@ -230,7 +242,9 @@ function loadData() {
 	}
 
 	try {
-		request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
+		var pipe = request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'));
+		pipe.on('finish', function () { console.log('sessions.json downloaded successfully') })
+		pipe.on('error', function (err) { console.error('sessions.json downloaded problem "'+err+'"') })
 	} catch (e) {
 		console.error('ERROR:download of "sessions.json" was "'+e+'"');
 	}
