@@ -226,10 +226,14 @@ function loadData() {
 		console.log('sessions.json loaded');
 	} catch (e) {
 		sessions = [];
-		console.log('sessions.json defect, starting with [], error was "'+e+'"');
+		console.error('sessions.json defect, starting with [], error was "'+e+'"');
 	}
 
-	request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
+	try {
+		request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'))
+	} catch (e) {
+		console.error('ERROR:download of "sessions.json" was "'+e+'"');
+	}
 
 	sessions = sessions.filter(function (session) {
 		if (!session.begin) return false;
