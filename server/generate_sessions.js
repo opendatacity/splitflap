@@ -242,9 +242,9 @@ function loadData() {
 	}
 
 	try {
-		var pipe = request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'));
-		pipe.on('finish', function () { console.log('sessions.json downloaded successfully') })
-		pipe.on('error', function (err) { console.error('sessions.json downloaded problem "'+err+'"') })
+		//var pipe = request('http://data.re-publica.de/data/rp15/sessions.json').pipe(fs.createWriteStream('./data/sessions.json'));
+		//pipe.on('finish', function () { console.log('sessions.json downloaded successfully') })
+		//pipe.on('error', function (err) { console.error('sessions.json downloaded problem "'+err+'"') })
 	} catch (e) {
 		console.error('ERROR:download of "sessions.json" was "'+e+'"');
 	}
