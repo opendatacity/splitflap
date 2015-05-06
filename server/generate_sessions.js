@@ -11,6 +11,7 @@ var videoFolder = './web/video/';
 var feedFolder = './web/feeds/';
 
 var videoFeedTemplate = fs.readFileSync('./data/feed_video.template', 'utf8');
+var stageFeedTemplate = fs.readFileSync('./data/feed_stage.template', 'utf8');
 
 var flaps = [
 	{key:'header',   font:'800', x:48, dy:48, length:29, gap:3},
@@ -42,6 +43,16 @@ var monitore = [
 	{ name:'monitor3', stages:['STG-3','STG-6','STG-9','STG-T' ]}
 ]
 
+var stages = [
+	{ name:'STG-1', filename:'stage1', currentSession:false },
+	{ name:'STG-2', filename:'stage2', currentSession:false },
+	{ name:'STG-3', filename:'stage3', currentSession:false },
+	{ name:'STG-4', filename:'stage4', currentSession:false },
+	{ name:'STG-6', filename:'stage6', currentSession:false },
+]
+var stageLookup = {};
+stages.forEach(function (stage) { stageLookup[stage.name] = stage });
+
 var knownHashs = {};
 if (fs.existsSync(knownHashsFilename)) {
 	knownHashs = fs.readFileSync(knownHashsFilename, 'utf8');
@@ -52,14 +63,59 @@ if (fs.existsSync(knownHashsFilename)) {
 Splitflap(flaps, function (splitflap) {
 	var todos = {};
 	var queue = {};
+	var _sessions = [];
 	var todoCount = 0;
 	var todoRunning = false;
+	var nightTimeOffset = 4*3600;
 
 	checkData();
 	setInterval(checkData, c.sessions.updateDataEvery*1000);
 
 	checkFeed();
 	setInterval(checkFeed, c.sessions.updateFeedEvery*1000);
+
+	checkStageFeed();
+	setInterval(checkStageFeed, c.sessions.updateFeedEvery*1000);
+
+	function checkStageFeed() {
+		console.log('checkStageFeed');
+
+		var time = (new Date()).getTime()/1000;
+		var nightTime = Math.ceil((time-nightTimeOffset)/86400)*86400 + nightTimeOffset;
+
+		stages.forEach(function (stage) {
+			stage.currentSession = false;
+		})
+
+		_sessions.forEach(function (session) {
+			if (session.endT < time) return;
+			if (session.beginT > nightTime) return;
+			if (!stageLookup[session.location]) return;
+			stage = stageLookup[session.location];
+			if (!stage.currentSession) return stage.currentSession = session;
+			if (stage.currentSession.beginT > session.beginT) stage.currentSession = session;
+		})
+
+		stages.forEach(function (stage) {
+			var title;
+			if (stage.currentSession) {
+				title = stage.currentSession.title;
+				if (stage.currentSession.beginT > time) title = 'next: '+title;
+			} else {
+				title = '';
+			}
+			var rss = stageFeedTemplate.replace(/\{\{.*?\}\}/g, function (key) {
+				key = key.substr(2, key.length-4);
+				switch (key) {
+					case 'stage': return stage.name;
+					case 'title': return title;
+					default:
+						console.error('Unknown template key "'+key+'"');
+				}
+			})
+			fs.writeFileSync(feedFolder+stage.filename+'.rss', rss, 'utf8');
+		})
+	}
 
 	function checkFeed() {
 		console.log('checkFeed');
@@ -148,10 +204,10 @@ Splitflap(flaps, function (splitflap) {
 
 		queue = {};
 		var sessions = loadData();
+		_sessions = sessions;
 		var time0 = (new Date()).getTime()/1000;
 		todoCount = 0;
 
-		var nightTimeOffset = 4*3600;
 		for (var t = 0; t < c.sessions.future; t += c.sessions.loopTimeStep) {
 			var time = Math.floor((time0 + t)/c.sessions.loopTimeStep)*c.sessions.loopTimeStep;
 			var time_str = (new Date((time+2*3600)*1000)).toISOString().substr(0,16);
