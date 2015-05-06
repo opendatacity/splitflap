@@ -151,9 +151,12 @@ Splitflap(flaps, function (splitflap) {
 		var time0 = (new Date()).getTime()/1000;
 		todoCount = 0;
 
+		var nightTimeOffset = 4*3600;
 		for (var t = 0; t < c.sessions.future; t += c.sessions.loopTimeStep) {
 			var time = Math.floor((time0 + t)/c.sessions.loopTimeStep)*c.sessions.loopTimeStep;
 			var time_str = (new Date((time+2*3600)*1000)).toISOString().substr(0,16);
+			var nightTime = Math.ceil((time-nightTimeOffset)/86400)*86400 + nightTimeOffset;
+			//console.log((new Date((nightTime+2*3600)*1000)).toISOString().substr(0,16))
 
 			monitore.forEach(function (monitor) {
 				var screenplay = [state0,0];
@@ -165,7 +168,7 @@ Splitflap(flaps, function (splitflap) {
 					sessions.forEach(function (session) {
 						if (session.location != stage) return;
 						if ((session.beginT <= time) && (time < session.endT)) s0 = session;
-						if (session.beginT > time) {
+						if ((session.beginT > time) && (session.beginT < nightTime)) {
 							if (!s1) {
 								s1 = session;
 							} else {
@@ -174,14 +177,24 @@ Splitflap(flaps, function (splitflap) {
 						}
 					})
 
-					var state = {
-						header:   stage,
-						time1:    s0 ? 'now running: '+sessionTime(s0) : 'ready for boarding',
-						title1:   s0 ? s0.title : '',
-						speaker1: s0 ? s0.speakers : '',
-						time2:    s1 ? 'next: '+sessionTime(s1) : '',
-						title2:   s1 ? s1.title : '',
-						speaker2: s1 ? s1.speakers : ''
+					var state = { header: stage };
+					if (s0) {
+						state.time1    = 'now running: '+sessionTime(s0);
+						state.title1   = s0.title;
+						state.speaker1 = s0.speakers;
+					} else {
+						state.time1    = s1 ? 'ready for boarding' : 'no more sessions today';
+						state.title1   = '';
+						state.speaker1 = '';
+					}
+					if (s1) {
+						state.time2    = 'next: '+sessionTime(s1);
+						state.title2   = s1.title;
+						state.speaker2 = s1.speakers;
+					} else {
+						state.time2    = '';
+						state.title2   = '';
+						state.speaker2 = '';
 					}
 
 					screenplay.push(state, pause);
