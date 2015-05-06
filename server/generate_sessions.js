@@ -113,6 +113,7 @@ Splitflap(flaps, function (splitflap) {
 						console.error('Unknown template key "'+key+'"');
 				}
 			})
+			console.log('write "'+feedFolder+stage.filename+'.rss"');
 			fs.writeFileSync(feedFolder+stage.filename+'.rss', rss, 'utf8');
 		})
 	}
