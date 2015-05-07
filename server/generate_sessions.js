@@ -40,7 +40,7 @@ var state0 = {
 var monitore = [
 	{ name:'monitor1', stages:['STG-1','STG-4','STG-7','STG-10']},
 	{ name:'monitor2', stages:['STG-2','STG-5','STG-8','STG-11']},
-	{ name:'monitor3', stages:['STG-3','STG-6','STG-9','STG-T' ]}
+	{ name:'monitor3', stages:['STG-3','STG-6','STG-9','STG-J' ]}
 ]
 
 var stages = [
