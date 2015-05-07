@@ -25,13 +25,13 @@ var state0 = {
 }
 
 var state1 = {
-	header:   'Stage 1',
-	time1:    'now running: 12:15-13:15',
-	title1:   'IMMERSIVE JOURNALISM: USING VIRTUAL REALITY FOR NEWS AND NONFICTION',
-	speaker1: 'NONNY DE LA PENA',
-	time2:    'next: 13:30-14:30',
-	title2:   'LIVING IN THE ELECTROMAGNETIC SPECTRUM',
-	speaker2: 'JAMES BRIDLE'
+	header:   'STG-J',
+	time1:    'now running: 13:45-14:45',
+	title1:   'RE:DATA – EIN STANDARD FÜR OFFENE KONFERENZDATEN',
+	speaker1: '♥ Michael Kreil, ♥ Sebastian Vollnhals, Alexander Gräsel',
+	time2:    'next: 15:00-16:00',
+	title2:   'LEARN DO SHARE – OPEN DESIGN GAME',
+	speaker2: 'ELE JANSEN, CLAIRE MARSHALL'
 }
 
 var state2 = {
@@ -65,7 +65,7 @@ var state4 = {
 }
 
 var pause = 10;
-var screenplay = [state0,0,state1,pause,state2,pause,state3,pause,state4,pause,state1,pause,state0,0]
+var screenplay = [state0,0,state1,pause,state0,0]
 
 Splitflap(flaps, function (splitflap) {
 	splitflap.renderMovie(screenplay, 'web/video/test.mp4');
