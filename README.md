@@ -2,13 +2,25 @@
 
 ![Photo](https://raw.githubusercontent.com/opendatacity/splitflap/master/photo.jpg)
 
-Ok, ich bin ja nicht so'n Fan von Doku-Schreiben. Notfalls einfach per Twitter fragen: [@MichaelKreil](https://twitter.com/MichaelKreil).
+Ok, ich bin ja nicht so'n Fan von Doku-Schreiben. Bitte einfach per Twitter fragen: [@MichaelKreil](https://twitter.com/MichaelKreil)
 
-Das meine ich ernst! Wenn was unklar ist, bitte nachfragen, dann erkläre ich das in der Doku genauer!
+## Installation
 
-Prinzipiell funktioniert es so:
+Braucht:
 
-## Preparation
+  - [node.js](https://nodejs.org)
+  - [GraphicsMagick](http://www.graphicsmagick.org) (weil's viel schneller ist, als ImageMagick)
+  - [FFmpeg](https://ffmpeg.org)
+
+Installation:
+
+    git clone git@github.com:opendatacity/splitflap.git
+    cd splitflap
+    npm install
+
+## Wie funktioniert es?
+
+### Vorbereitung
 
 In der [`config.js`](https://github.com/MichaelKreil/splitflap/blob/master/config.js) wird alles konfiguriert.
 
@@ -18,7 +30,7 @@ Mit [`textures/1_generate_letters.js`](https://github.com/MichaelKreil/splitflap
 Mit [`textures/2_raytrace.js`](https://github.com/MichaelKreil/splitflap/blob/master/textures/2_raytrace.js) werden dann die Letter als Textur verwendet, um in JavaScript die Flip-Animation zu raytracen. Jupp, wir reden von einem JavaScript-Raytracer ... ist aber total simpel. Die erzeugten Frames sehen dann so aus:
 ![texture_400.png](https://github.com/MichaelKreil/splitflap/blob/master/images/texture_400.png)
 
-## Videos
+### Videos
 
 Für die Generierung der Videos werden die Texte als Objects der [`lib/splitflap.js`](https://github.com/MichaelKreil/splitflap/blob/master/lib/splitflap.js)-Library übergeben.
 Hier werden dann die Texturen in einem Binary Buffer zusammenkopiert.
@@ -30,7 +42,7 @@ und
 [`server/welcome.js`](https://github.com/MichaelKreil/splitflap/blob/master/server/welcome.js)
 erzeugen so die Intro-, Outro- und Welcome-Videos.
 
-## Live-Video
+### Live-Video
 
 Für die Echtzeit-Session-Ankündigungen gibt's ein noch mehr magic. Oder besser: die Fiddelei formaly known as [`server/generate_sessions.js`](https://github.com/MichaelKreil/splitflap/blob/master/server/generate_sessions.js).
 Dort wird im 15-Minuten-Takt die [`sessions.json`](http://data.re-publica.de/data/rp15/sessions.json) runtergeladen, die im Rahmen unseres [re:data-Projektes](http://data.re-publica.de) erzeugt wird.
