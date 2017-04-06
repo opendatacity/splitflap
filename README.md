@@ -9,7 +9,7 @@ Ok, ich bin ja nicht so'n Fan von Doku-Schreiben. Bitte einfach per Twitter frag
 Braucht:
 
   - [node.js](https://nodejs.org)
-  - [GraphicsMagick](http://www.graphicsmagick.org) (weil's viel schneller ist, als ImageMagick)
+  - ImageMagick
   - [FFmpeg](https://ffmpeg.org)
 
 Installation:
