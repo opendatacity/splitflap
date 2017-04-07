@@ -9,6 +9,8 @@ var config = {
 	flapGap1: 1,
 	flapGap2: 10,
 	fps: 60,
+	width: 1920,
+	height: 1080,
 	backColor: [0,46,60],
 	sessions: {
 		future:        1.0*24*60*60,
